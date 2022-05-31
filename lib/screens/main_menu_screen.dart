@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:quiz_app/controller/question_answer_controller.dart';
 import 'package:quiz_app/screens/question_answer_screen.dart';
 import 'package:quiz_app/utils/colors.dart';
 import 'package:quiz_app/widget/custom_button.dart';
 class MainMenuScreen extends StatelessWidget {
-  const MainMenuScreen({ Key? key }) : super(key: key);
-
+MainMenuScreen({ Key? key }) : super(key: key);
+ final QuestionAnswerController _answerController = Get.put(QuestionAnswerController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,6 +65,7 @@ class MainMenuScreen extends StatelessWidget {
                     CustomButton(
                       buttonLevel: "Start",
                       onPressed: (){
+                        _answerController.getQuestionAndAnswer();
                         Navigator.push(context, MaterialPageRoute(builder: (context)=> const QuestionAndAnswerScreen()));
                       },
                       textColor: AppColors.kBlackColor.withOpacity(0.8),

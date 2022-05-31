@@ -4,12 +4,6 @@
 
 // ignore_for_file: prefer_if_null_operators
 
-import 'dart:convert';
-
-QuestionModel questionModelFromJson(String str) => QuestionModel.fromJson(json.decode(str));
-
-String questionModelToJson(QuestionModel data) => json.encode(data.toJson());
-
 class QuestionModel {
     QuestionModel({
         this.questions,

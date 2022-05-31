@@ -66,7 +66,7 @@ MainMenuScreen({ Key? key }) : super(key: key);
                       buttonLevel: "Start",
                       onPressed: (){
                         _answerController.getQuestionAndAnswer();
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=> const QuestionAndAnswerScreen()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> QuestionAndAnswerScreen()));
                       },
                       textColor: AppColors.kBlackColor.withOpacity(0.8),
                       color: AppColors.kWhiteColor,

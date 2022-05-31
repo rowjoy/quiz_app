@@ -6,21 +6,27 @@ import '../utils/string.dart';
 
 class QuestionAnswerController extends GetxController{
 
+var index = 0.obs;
 
+void updateIndex (){
+  if(index.value < 9){
+      index +1;
+  }else{
+    index --;
+  }
+  // update();
+}
 final ApiProvider _apiProvider = ApiProvider();
-
-List<QuestionModel> _questionlist = [];
-List<Answers> _answerList =[];
-  Future getQuestionAndAnswer () async {
-     await  _apiProvider.getData(
+  Future<List<Question>> getQuestionAndAnswer () async {
+   var responce = await  _apiProvider.getData(
         baseUrl: Strings.apiUrl,
         url: Strings.quizurl
-      ).then((value){
-
-        for(var i in value["questions"]){
-          print(i);
-        }
-      });
+      );
+    List data = [];
+    for(var i in responce["questions"]){
+        data.add(i);
+    }
+    return data.map((e) => Question.fromJson(e)).toList();
   }
 
 }

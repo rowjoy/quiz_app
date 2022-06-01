@@ -18,30 +18,6 @@ class QuestionAndAnswerScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                height: 50,
-                color: AppColors.kWhiteColor,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    Text("Questions: X/Y",
-                      style: TextStyle(
-                        color: AppColors.ksecondaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                    Text("Score : 300",
-                      style: TextStyle(
-                        color: AppColors.ksecondaryColor,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: 32,),
               FutureBuilder<List<Question>>(
                 future:_answerController.getQuestionAndAnswer(),
                 builder: (context, snapSort){
@@ -49,56 +25,92 @@ class QuestionAndAnswerScreen extends StatelessWidget {
                 }
                 if(snapSort.hasData){
                 List<Question>? _data = snapSort.data;
-                  return Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Card(
-                          elevation: 10,
-                          shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                          color: AppColors.kBlackColor.withOpacity(0.1),
-                          child: Padding(
-                            padding: const EdgeInsets.all(4.0),
-                            child: Container(
-                              height: 250,
-                              decoration: BoxDecoration(
-                                color: AppColors.kWhiteColor,
-                                borderRadius: BorderRadius.circular(10),
+                Map<String ,dynamic> _answer = _data![2].answers!.toJson();
+                  return ListView.builder(
+                    itemCount: 1,
+                    shrinkWrap: true,
+                     itemBuilder: (context , index){
+                    return Column(
+                      children: [
+                        Container(
+                          height: 50,
+                          color: AppColors.kWhiteColor,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children:  [
+                              Text("Questions: ${_answerController.index}/${_data.length}",
+                                style: TextStyle(
+                                  color: AppColors.ksecondaryColor,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w700,
+                                ),
                               ),
-                              child: Center(
-                                child: Obx(()=>
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    // ignore: prefer_const_literals_to_create_immutables
-                                    children: [
-                                     Text("${_data![_answerController.index.value].score} point"),
-                                     _data[_answerController.index.value].questionImageUrl != null ? AspectRatio(
-                                       aspectRatio: 2,
-                                       child: Image.network("${_data[_answerController.index.value].questionImageUrl}")) : SizedBox(),
-                                     Text("${_data[_answerController.index.value].question}"),
-                                      
-                                    ],
+                              Text("Score :${_answerController.score.value}",
+                                style: TextStyle(
+                                  color: AppColors.ksecondaryColor,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Card(
+                            elevation: 10,
+                            shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                            color: AppColors.kBlackColor.withOpacity(0.1),
+                            child: Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: Container(
+                                height: 250,
+                                decoration: BoxDecoration(
+                                  color: AppColors.kWhiteColor,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Center(
+                                  child: 
+                                    Column(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Text(_data[0].score.toString()+ "Point",
+                                          style: TextStyle(
+                                            color: AppColors.kBlackColor,
+                                            fontSize: 16,
+                                          ),
+                                        ),
+                                        Text( _data[0].question.toString(),
+                                          style: TextStyle(
+                                            color: AppColors.kBlackColor,
+                                            fontSize: 16,
+                                            
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                      ),
-                      ListView.builder(
-                        itemCount: 1,
-                        shrinkWrap: true,
-                        itemBuilder: (context, index){
-                          return  CustomAnswerButton(
-                            title: "${_data![0].answers!.a}",
-                            borderColors: index == 2 ?  AppColors.kPrimaryColor :AppColors.kWhiteColor ,
-                            onTap: (){
-                              _answerController.updateIndex();
-                            } 
-                          );
-                        },
-                      ),
-                    ],
+                          ListView.builder(
+                            shrinkWrap: true,
+                            itemCount: _answer.length,
+                            itemBuilder: (context, index){
+                              print(_answer.length);
+                              var valus = _answer.values.elementAt(index);
+                              return CustomAnswerButton(
+                                title: valus.toString(),
+                                onTap: (){
+                                 
+                                },
+                              );
+                            }
+                          ),
+                        ],
+                      );
+                    }
                   );
                 }
                 return  Center(child: CircularProgressIndicator());

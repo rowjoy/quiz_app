@@ -7,15 +7,14 @@ import '../utils/string.dart';
 class QuestionAnswerController extends GetxController{
 
 var index = 0.obs;
+var score = 0.obs;
 
 void updateIndex (){
-  if(index.value < 9){
       index +1;
-  }else{
-    index --;
-  }
-  // update();
+      update();
 }
+
+
 final ApiProvider _apiProvider = ApiProvider();
   Future<List<Question>> getQuestionAndAnswer () async {
    var responce = await  _apiProvider.getData(

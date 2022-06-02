@@ -49,13 +49,15 @@ MainMenuScreen({ Key? key }) : super(key: key);
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const Text("500 point",
-                    style: TextStyle(
-                      color: AppColors.kWhiteColor,
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  )
+                   Obx(()=>Text("${_answerController.score.value}",
+                      // ignore: prefer_const_constructors
+                      style: TextStyle(
+                        color: AppColors.kWhiteColor,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
+                                     ),
+                   )
                 ],
               ),
               Padding(

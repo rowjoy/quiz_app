@@ -35,9 +35,9 @@ class CustomAnswerButton extends StatelessWidget {
               ),
               child: Center(
                 child: Text(title!,
-                  style: TextStyle(
-                    color: Colors.black.withOpacity(0.5),
-                    fontWeight: FontWeight.w700,
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
                     fontSize: 17,
                   ),
                 ),

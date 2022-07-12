@@ -64,7 +64,9 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/logo/
+     - images/
+     - assets/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -89,5 +91,15 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
+  fonts:
+    - family: Quando
+      fonts:
+        - asset: fonts/Quando.ttf
+    - family: Satisfy
+      fonts:
+        - asset: fonts/Satisfy.ttf
+    - family: Alike
+      fonts:
+        - asset: fonts/Alike-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

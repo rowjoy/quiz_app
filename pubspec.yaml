@@ -39,6 +39,7 @@ dependencies:
   http: ^0.13.4
   flutter_easyloading: ^3.0.3
   flutter_countdown_timer: ^4.1.0
+  flutter_staggered_animations: "^1.0.0"
 
 dev_dependencies:
   flutter_test:

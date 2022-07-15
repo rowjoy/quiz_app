@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/home.dart';
+import 'package:quiz_app/screen/home.dart';
 
 class resultpage extends StatefulWidget {
  final int marks;

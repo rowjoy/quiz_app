@@ -1,15 +1,17 @@
+// ignore_for_file: no_logic_in_create_state, non_constant_identifier_names, prefer_typing_uninitialized_variables, camel_case_types, must_be_immutable
+
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:quiz_app/resultpage.dart';
+import 'package:quiz_app/screen/resultpage.dart';
 
 class getjson extends StatelessWidget {
   // accept the langname as a parameter
 
   late String langname;
-  getjson(this.langname);
+  getjson(this.langname, {Key? key}) : super(key: key);
  late String assettoload;
 
   // a function
@@ -36,12 +38,11 @@ class getjson extends StatelessWidget {
     setasset();
     // and now we return the FutureBuilder to load and decode JSON
     return FutureBuilder(
-      future:
-          DefaultAssetBundle.of(context).loadString(assettoload, cache: false),
+      future: DefaultAssetBundle.of(context).loadString(assettoload, cache: false),
       builder: (context, snapshot) {
         List mydata = json.decode(snapshot.data.toString());
-        if (mydata == null) {
-          return Scaffold(
+        if (mydata.isEmpty) {
+          return const Scaffold(
             body: Center(
               child: Text(
                 "Loading",
@@ -55,15 +56,13 @@ class getjson extends StatelessWidget {
     );
   }
 }
-
 class quizpage extends StatefulWidget {
-  final List mydata;
+  final List? mydata;
 
-  quizpage({Key? key, required this.mydata}) : super(key: key);
+  const quizpage({Key? key, required this.mydata}) : super(key: key);
   @override
-  _quizpageState createState() => _quizpageState(mydata);
+  _quizpageState createState() => _quizpageState(mydata!);
 }
-
 class _quizpageState extends State<quizpage> {
   final List mydata;
   _quizpageState(this.mydata);
@@ -95,6 +94,7 @@ class _quizpageState extends State<quizpage> {
 
   genrandomarray(){
     var distinctIds = [];
+    // ignore: unnecessary_new
     var rand = new Random();
       for (int i = 0; ;) {
       distinctIds.add(rand.nextInt(10));
@@ -105,6 +105,7 @@ class _quizpageState extends State<quizpage> {
           break;
         }
       }
+      // ignore: avoid_print
       print(random_array);
   }
 
@@ -204,12 +205,12 @@ class _quizpageState extends State<quizpage> {
     });
     // nextquestion();
     // changed timer duration to 1 second
-    Timer(Duration(seconds: 2), nextquestion);
+    Timer(const Duration(seconds: 2), nextquestion);
   }
 
   Widget choicebutton(String k) {
     return Padding(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         vertical: 10.0,
         horizontal: 20.0,
       ),
@@ -217,7 +218,7 @@ class _quizpageState extends State<quizpage> {
         onPressed: () => checkanswer(k),
         child: Text(
           mydata[1][i.toString()][k],
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontFamily: "Alike",
             fontSize: 16.0,
@@ -245,11 +246,11 @@ class _quizpageState extends State<quizpage> {
           Expanded(
             flex: 3,
             child: Container(
-              padding: EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(15.0),
               alignment: Alignment.bottomLeft,
               child: Text(
                 mydata[0][i.toString()],
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16.0,
                   fontFamily: "Quando",
                 ),
@@ -260,6 +261,7 @@ class _quizpageState extends State<quizpage> {
               flex: 6,
               child: AbsorbPointer(
                 absorbing: disableAnswer,
+                  // ignore: avoid_unnecessary_containers
                   child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -280,7 +282,7 @@ class _quizpageState extends State<quizpage> {
               child: Center(
                 child: Text(
                   showtimer,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 35.0,
                     fontWeight: FontWeight.w700,
                     fontFamily: 'Times New Roman',

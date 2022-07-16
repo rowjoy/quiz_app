@@ -1,13 +1,17 @@
+// ignore_for_file: no_logic_in_create_state, avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 import 'package:quiz_app/screen/home.dart';
 
+// ignore: camel_case_types
 class resultpage extends StatefulWidget {
  final int marks;
-  resultpage({Key? key , required this.marks}) : super(key : key);
+  const resultpage({Key? key , required this.marks}) : super(key : key);
   @override
   _resultpageState createState() => _resultpageState(marks);
 }
 
+// ignore: camel_case_types
 class _resultpageState extends State<resultpage> {
 
   List<String> images = [
@@ -23,12 +27,15 @@ late  String image;
   void initState(){
     if(marks < 20){
       image = images[2];
+      // ignore: prefer_adjacent_string_concatenation
       message = "You Should Try Hard..\n" + "You Scored $marks";
     }else if(marks < 35){
       image = images[1];
+      // ignore: prefer_adjacent_string_concatenation
       message = "You Can Do Better..\n" + "You Scored $marks";
     }else{
       image = images[0];
+      // ignore: prefer_adjacent_string_concatenation
       message = "You Did Very Well..\n" + "You Scored $marks";
     }
     super.initState();
@@ -40,7 +47,7 @@ late  String image;
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Result",
         ),
       ),
@@ -54,6 +61,7 @@ late  String image;
                 child: Column(
                   children: <Widget>[
                     Material(
+                      // ignore: sized_box_for_whitespace
                       child: Container(
                         width: 300.0,
                         height: 300.0,
@@ -67,14 +75,14 @@ late  String image;
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         vertical: 5.0,
                         horizontal: 15.0,
                       ),
                       child: Center(
                       child: Text(
                         message,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 18.0,
                           fontFamily: "Quando",
                         ),
@@ -91,23 +99,24 @@ late  String image;
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                // ignore: deprecated_member_use
                 OutlineButton(
                   onPressed: (){
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => homepage(),
+                      builder: (context) => const homepage(),
                     ));
                   },
-                  child: Text(
+                  child: const Text(
                     "Continue",
                     style: TextStyle(
                       fontSize: 18.0,
                     ),
                   ),
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     vertical: 10.0,
                     horizontal: 25.0,
                   ),
-                  borderSide: BorderSide(width: 3.0, color: Colors.indigo),
+                  borderSide: const BorderSide(width: 3.0, color: Colors.indigo),
                   splashColor: Colors.indigoAccent,
                 )
               ],

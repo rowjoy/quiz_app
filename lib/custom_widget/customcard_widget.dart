@@ -66,7 +66,7 @@ class Customcard extends StatelessWidget {
                         child: Text(
                           langname,
                           style: TextStyle(
-                            fontSize: 20.0,
+                            fontSize: 18.0,
                             color: AppColor.whiteColor,
                             fontFamily: "Quando",
                             fontWeight: FontWeight.w700,

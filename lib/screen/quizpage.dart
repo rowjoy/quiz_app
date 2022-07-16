@@ -1,4 +1,4 @@
-// ignore_for_file: no_logic_in_create_state, non_constant_identifier_names, prefer_typing_uninitialized_variables, camel_case_types, must_be_immutable
+// ignore_for_file: no_logic_in_create_state, non_constant_identifier_names, prefer_typing_uninitialized_variables, camel_case_types, must_be_immutable, prefer_const_constructors
 
 import 'dart:async';
 import 'dart:convert';
@@ -7,24 +7,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:quiz_app/screen/resultpage.dart';
 
-class getjson extends StatelessWidget {
+class getjson extends StatefulWidget {
   // accept the langname as a parameter
 
-  late String langname;
+  late String? langname;
   getjson(this.langname, {Key? key}) : super(key: key);
+
+  @override
+  State<getjson> createState() => _getjsonState();
+}
+
+class _getjsonState extends State<getjson> {
  late String assettoload;
 
   // a function
-  // sets the asset to a particular JSON file
-  // and opens the JSON
   setasset() {
-    if (langname == "Python") {
+    if (widget.langname == "Python") {
       assettoload = "assets/python.json";
-    } else if (langname == "Java") {
+    } else if (widget.langname == "Java") {
       assettoload = "assets/java.json";
-    } else if (langname == "Javascript") {
+    } else if (widget.langname == "Javascript") {
       assettoload = "assets/js.json";
-    } else if (langname == "C++") {
+    } else if (widget.langname == "C++") {
       assettoload = "assets/cpp.json";
     } else {
       assettoload = "assets/linux.json";
@@ -35,36 +39,39 @@ class getjson extends StatelessWidget {
   Widget build(BuildContext context) {
     // this function is called before the build so that
     // the string assettoload is avialable to the DefaultAssetBuilder
-    setasset();
     // and now we return the FutureBuilder to load and decode JSON
+    setasset();
     return FutureBuilder(
       future: DefaultAssetBundle.of(context).loadString(assettoload, cache: false),
       builder: (context, snapshot) {
-        List mydata = json.decode(snapshot.data.toString());
-        if (mydata.isEmpty) {
-          return const Scaffold(
-            body: Center(
-              child: Text(
-                "Loading",
-              ),
-            ),
-          );
-        } else {
-          return quizpage(mydata: mydata);
+        if(snapshot.hasData){
+          List? mydata = json.decode(snapshot.data.toString());
+          return quizpage(mydata: mydata ?? [] );
+        }else if(snapshot.hasError){
+          Navigator.canPop(context);
+
         }
+        return Center(child: CircularProgressIndicator());
       },
     );
   }
 }
+
+
+
+
+
+
+
 class quizpage extends StatefulWidget {
   final List? mydata;
 
   const quizpage({Key? key, required this.mydata}) : super(key: key);
   @override
-  _quizpageState createState() => _quizpageState(mydata!);
+  _quizpageState createState() => _quizpageState(mydata);
 }
 class _quizpageState extends State<quizpage> {
-  final List mydata;
+  final List? mydata;
   _quizpageState(this.mydata);
 
   Color colortoshow = Colors.indigoAccent;
@@ -77,7 +84,7 @@ class _quizpageState extends State<quizpage> {
   int j = 1;
   int timer = 30;
   String showtimer = "30";
-  var random_array;
+  List? random_array;
 
   Map<String, Color> btncolor = {
     "a": Colors.indigoAccent,
@@ -96,36 +103,22 @@ class _quizpageState extends State<quizpage> {
     var distinctIds = [];
     // ignore: unnecessary_new
     var rand = new Random();
-      for (int i = 0; ;) {
+      // ignore: unused_local_variable
+      for (int i = 0;  ;) {
       distinctIds.add(rand.nextInt(10));
         random_array = distinctIds.toSet().toList();
-        if(random_array.length < 10){
+        if(random_array!.length < 10){
           continue;
         }else{
           break;
         }
       }
       // ignore: avoid_print
-      print(random_array);
+      print("Rendom arrey $random_array");
+    
   }
 
-  //   var random_array;
-  //   var distinctIds = [];
-  //   var rand = new Random();
-  //     for (int i = 0; ;) {
-  //     distinctIds.add(rand.nextInt(10));
-  //       random_array = distinctIds.toSet().toList();
-  //       if(random_array.length < 10){
-  //         continue;
-  //       }else{
-  //         break;
-  //       }
-  //     }
-  //   print(random_array);
-
-  // ----- END OF CODE
-  // var random_array = [1, 6, 7, 2, 4, 10, 8, 3, 9, 5];
-
+    
   // overriding the initstate function to start timer as this screen is created
   @override
   void initState() {
@@ -164,7 +157,7 @@ class _quizpageState extends State<quizpage> {
     timer = 30;
     setState(() {
       if (j < 10) {
-        i = random_array[j];
+        i = random_array![j];
         j++;
       } else {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -181,24 +174,13 @@ class _quizpageState extends State<quizpage> {
   }
 
   void checkanswer(String k) {
-    
-    // in the previous version this was
-    // mydata[2]["1"] == mydata[1]["1"][k]
-    // which i forgot to change
-    // so nake sure that this is now corrected
-    if (mydata[2][i.toString()] == mydata[1][i.toString()][k]) {
-      // just a print sattement to check the correct working
-      // debugPrint(mydata[2][i.toString()] + " is equal to " + mydata[1][i.toString()][k]);
+    if (mydata![2][i.toString()] == mydata![1][i.toString()][k]) {
       marks = marks + 5;
-      // changing the color variable to be green
       colortoshow = right;
     } else {
-      // just a print sattement to check the correct working
-      // debugPrint(mydata[2]["1"] + " is equal to " + mydata[1]["1"][k]);
       colortoshow = wrong;
     }
     setState(() {
-      // applying the changed color to the particular button that was selected
       btncolor[k] = colortoshow;
       canceltimer = true;
       disableAnswer = true;
@@ -216,8 +198,7 @@ class _quizpageState extends State<quizpage> {
       ),
       child: MaterialButton(
         onPressed: () => checkanswer(k),
-        child: Text(
-          mydata[1][i.toString()][k],
+        child: Text("${mydata![1][i.toString()][k]}",
           style: const TextStyle(
             color: Colors.white,
             fontFamily: "Alike",
@@ -238,8 +219,7 @@ class _quizpageState extends State<quizpage> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setPreferredOrientations(
-        [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
     return Scaffold(
       body: Column(
         children: <Widget>[
@@ -248,8 +228,7 @@ class _quizpageState extends State<quizpage> {
             child: Container(
               padding: const EdgeInsets.all(15.0),
               alignment: Alignment.bottomLeft,
-              child: Text(
-                mydata[0][i.toString()],
+              child: Text("${mydata![0][i.toString()]}",
                 style: const TextStyle(
                   fontSize: 16.0,
                   fontFamily: "Quando",

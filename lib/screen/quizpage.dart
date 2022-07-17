@@ -6,6 +6,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:quiz_app/screen/resultpage.dart';
+import 'package:quiz_app/utils/colors.dart';
 
 class getjson extends StatefulWidget {
   // accept the langname as a parameter
@@ -37,22 +38,26 @@ class _getjsonState extends State<getjson> {
 
   @override
   Widget build(BuildContext context) {
-    // this function is called before the build so that
-    // the string assettoload is avialable to the DefaultAssetBuilder
-    // and now we return the FutureBuilder to load and decode JSON
     setasset();
-    return FutureBuilder(
-      future: DefaultAssetBundle.of(context).loadString(assettoload, cache: false),
-      builder: (context, snapshot) {
-        if(snapshot.hasData){
-          List? mydata = json.decode(snapshot.data.toString());
-          return quizpage(mydata: mydata ?? [] );
-        }else if(snapshot.hasError){
-          Navigator.canPop(context);
-
-        }
-        return Center(child: CircularProgressIndicator());
+    return WillPopScope(
+      onWillPop: () async {
+          final snack = SnackBar(content: Text('Please complete your exam'),duration: Duration(seconds: 2),);
+          ScaffoldMessenger.of(context).showSnackBar(snack);
+         return  false;
       },
+      child: FutureBuilder(
+        future: DefaultAssetBundle.of(context).loadString(assettoload, cache: false),
+        builder: (context, snapshot) {
+          if(snapshot.hasData){
+            List? mydata = json.decode(snapshot.data.toString());
+            return quizpage(mydata: mydata ?? [] );
+          }else if(snapshot.hasError){
+            Navigator.canPop(context);
+    
+          }
+          return Center(child: CircularProgressIndicator());
+        },
+      ),
     );
   }
 }
@@ -74,7 +79,7 @@ class _quizpageState extends State<quizpage> {
   final List? mydata;
   _quizpageState(this.mydata);
 
-  Color colortoshow = Colors.indigoAccent;
+  Color colortoshow = AppColor.whiteColor;
   Color right = Colors.green;
   Color wrong = Colors.red;
   int marks = 0;
@@ -87,10 +92,10 @@ class _quizpageState extends State<quizpage> {
   List? random_array;
 
   Map<String, Color> btncolor = {
-    "a": Colors.indigoAccent,
-    "b": Colors.indigoAccent,
-    "c": Colors.indigoAccent,
-    "d": Colors.indigoAccent,
+    "a": AppColor.whiteColor,
+    "b": AppColor.whiteColor,
+    "c": AppColor.whiteColor,
+    "d": AppColor.whiteColor,
   };
 
   bool canceltimer = false;
@@ -99,31 +104,31 @@ class _quizpageState extends State<quizpage> {
   // to create the array elements randomly use the dart:math module
   // -----     CODE TO GENERATE ARRAY RANDOMLY
 
-  genrandomarray(){
-    var distinctIds = [];
-    // ignore: unnecessary_new
-    var rand = new Random();
-      // ignore: unused_local_variable
-      for (int i = 0;  ;) {
-      distinctIds.add(rand.nextInt(10));
-        random_array = distinctIds.toSet().toList();
-        if(random_array!.length < 10){
-          continue;
-        }else{
-          break;
-        }
-      }
-      // ignore: avoid_print
-      print("Rendom arrey $random_array");
+  // genrandomarray(){
+  //   var distinctIds = [];
+  //   // ignore: unnecessary_new
+  //   var rand = new Random();
+  //     // ignore: unused_local_variable
+  //     for (int i = 0;  ;) {
+  //     distinctIds.add(rand.nextInt(10));
+  //       random_array = distinctIds.toSet().toList();
+  //       if(random_array!.length < 10){
+  //         continue;
+  //       }else{
+  //         break;
+  //       }
+  //     }
+  //     // ignore: avoid_print
+  //     print("Rendom arrey $random_array");
     
-  }
+  // }
 
     
   // overriding the initstate function to start timer as this screen is created
   @override
   void initState() {
     starttimer();
-    genrandomarray();
+    // genrandomarray();
     super.initState();
   }
 
@@ -156,18 +161,18 @@ class _quizpageState extends State<quizpage> {
     canceltimer = false;
     timer = 30;
     setState(() {
-      if (j < 10) {
-        i = random_array![j];
-        j++;
+      if (i < 10) {
+        // i = random_array[j];
+        i++;
       } else {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
           builder: (context) => resultpage(marks: marks),
         ));
       }
-      btncolor["a"] = Colors.indigoAccent;
-      btncolor["b"] = Colors.indigoAccent;
-      btncolor["c"] = Colors.indigoAccent;
-      btncolor["d"] = Colors.indigoAccent;
+      btncolor["a"] = AppColor.whiteColor;
+      btncolor["b"] = AppColor.whiteColor;
+      btncolor["c"] = AppColor.whiteColor;
+      btncolor["d"] = AppColor.whiteColor;
       disableAnswer = false;
     });
     starttimer();
@@ -192,15 +197,13 @@ class _quizpageState extends State<quizpage> {
 
   Widget choicebutton(String k) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        vertical: 10.0,
-        horizontal: 20.0,
-      ),
+      padding: const EdgeInsets.all(8.0),
       child: MaterialButton(
         onPressed: () => checkanswer(k),
         child: Text("${mydata![1][i.toString()][k]}",
-          style: const TextStyle(
-            color: Colors.white,
+          style:  TextStyle(
+            color: AppColor.prymeryColor,
+            fontWeight: FontWeight.bold,
             fontFamily: "Alike",
             fontSize: 16.0,
           ),
@@ -209,10 +212,10 @@ class _quizpageState extends State<quizpage> {
         color: btncolor[k],
         splashColor: Colors.indigo[700],
         highlightColor: Colors.indigo[700],
-        minWidth: 200.0,
+        minWidth: MediaQuery.of(context).size.width,
         height: 45.0,
         shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
       ),
     );
   }
@@ -221,6 +224,7 @@ class _quizpageState extends State<quizpage> {
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
     return Scaffold(
+      backgroundColor: AppColor.prymeryColor.withOpacity(0.9),
       body: Column(
         children: <Widget>[
           Expanded(
@@ -228,8 +232,9 @@ class _quizpageState extends State<quizpage> {
             child: Container(
               padding: const EdgeInsets.all(15.0),
               alignment: Alignment.bottomLeft,
-              child: Text("${mydata![0][i.toString()]}",
-                style: const TextStyle(
+              child: Text( "($i) " + "${mydata![0][i.toString()]}",
+                style: TextStyle(
+                  color: AppColor.whiteColor,
                   fontSize: 16.0,
                   fontFamily: "Quando",
                 ),
@@ -260,9 +265,10 @@ class _quizpageState extends State<quizpage> {
               alignment: Alignment.topCenter,
               child: Center(
                 child: Text(
-                  showtimer,
-                  style: const TextStyle(
-                    fontSize: 35.0,
+                  "Your answer time $showtimer",
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    color: AppColor.whiteColor,
                     fontWeight: FontWeight.w700,
                     fontFamily: 'Times New Roman',
                   ),

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:quiz_app/screen/home.dart';
+import 'package:quiz_app/utils/colors.dart';
 
 // ignore: camel_case_types
 class resultpage extends StatefulWidget {
@@ -45,84 +46,86 @@ late  String image;
   _resultpageState(this.marks);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Result",
-        ),
-      ),
-      body: Column(
-        children: <Widget>[
-          Expanded(
-            flex: 8,
-            child: Material(
-              elevation: 10.0,
-              child: Container(
-                child: Column(
-                  children: <Widget>[
-                    Material(
-                      // ignore: sized_box_for_whitespace
-                      child: Container(
-                        width: 300.0,
-                        height: 300.0,
-                        child: ClipRect(
-                          child: Image(
-                            image: AssetImage(
-                              image,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 5.0,
-                        horizontal: 15.0,
-                      ),
-                      child: Center(
-                      child: Text(
-                        message,
-                        style: const TextStyle(
-                          fontSize: 18.0,
-                          fontFamily: "Quando",
-                        ),
-                      ),
-                    )
-                    ),
-                  ],
+    return WillPopScope(
+      onWillPop: ()async {
+         Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const homepage()));
+        return false;
+      },
+      child: Scaffold(
+        backgroundColor: AppColor.prymeryColor.withOpacity(0.5),
+        // appBar: AppBar(
+        //   title: const Text(
+        //     "Result",
+        //   ),
+        // ),
+        body: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Text("Your achievements ",
+                style: TextStyle(
+                  fontSize: 25.0,
+                  color: AppColor.whiteColor,
+                  fontFamily: "Quando",
+                  fontWeight: FontWeight.w700,
                 ),
               ),
-            ),            
-          ),
-          Expanded(
-            flex: 4,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                // ignore: deprecated_member_use
-                OutlineButton(
-                  onPressed: (){
-                    Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const homepage(),
-                    ));
-                  },
-                  child: const Text(
-                    "Continue",
-                    style: TextStyle(
-                      fontSize: 18.0,
+              AspectRatio(
+                aspectRatio: 1.5,
+                child: ClipRect(
+                  child: Image(
+                    image: AssetImage(
+                      image,
                     ),
                   ),
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 10.0,
-                    horizontal: 25.0,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 5.0,
+                  horizontal: 15.0,
+                ),
+                child: Center(
+                child: Text(
+                  message,
+                  style:  TextStyle(
+                    color: AppColor.whiteColor,
+                    fontSize: 18.0,
+                    fontFamily: "Quando",
                   ),
-                  borderSide: const BorderSide(width: 3.0, color: Colors.indigo),
-                  splashColor: Colors.indigoAccent,
-                )
-              ],
-            ),
-          )
-        ],
+                ),
+              )
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  // ignore: deprecated_member_use
+                  OutlineButton(
+                    onPressed: (){
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (context) => const homepage(),
+                      ));
+                    },
+                    child:  Text(
+                      "Skip",
+                      style: TextStyle(
+                        color: AppColor.whiteColor,
+                        fontSize: 18.0,
+                      ),
+                    ),
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 10.0,
+                      horizontal: 25.0,
+                    ),
+                    borderSide: const BorderSide(width: 3.0, color: Colors.white),
+                    splashColor: Colors.green,
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

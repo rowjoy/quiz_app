@@ -18,7 +18,7 @@ class _resultpageState extends State<resultpage> {
   List<String> images = [
     "images/success.png",
     "images/good.png",
-    "images/bad.png",
+    "images/sad.png",
   ];
 
 late  String message;

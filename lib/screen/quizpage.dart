@@ -5,6 +5,7 @@ import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:quiz_app/screen/resultpage.dart';
 import 'package:quiz_app/utils/colors.dart';
 
@@ -100,35 +101,10 @@ class _quizpageState extends State<quizpage> {
 
   bool canceltimer = false;
 
-  // code inserted for choosing questions randomly
-  // to create the array elements randomly use the dart:math module
-  // -----     CODE TO GENERATE ARRAY RANDOMLY
 
-  // genrandomarray(){
-  //   var distinctIds = [];
-  //   // ignore: unnecessary_new
-  //   var rand = new Random();
-  //     // ignore: unused_local_variable
-  //     for (int i = 0;  ;) {
-  //     distinctIds.add(rand.nextInt(10));
-  //       random_array = distinctIds.toSet().toList();
-  //       if(random_array!.length < 10){
-  //         continue;
-  //       }else{
-  //         break;
-  //       }
-  //     }
-  //     // ignore: avoid_print
-  //     print("Rendom arrey $random_array");
-    
-  // }
-
-    
-  // overriding the initstate function to start timer as this screen is created
   @override
   void initState() {
     starttimer();
-    // genrandomarray();
     super.initState();
   }
 
@@ -162,7 +138,6 @@ class _quizpageState extends State<quizpage> {
     timer = 30;
     setState(() {
       if (i < 10) {
-        // i = random_array[j];
         i++;
       } else {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -184,6 +159,33 @@ class _quizpageState extends State<quizpage> {
       colortoshow = right;
     } else {
       colortoshow = wrong;
+      if(mydata![1][i.toString()].toString().contains(mydata![2][i.toString()])){
+        Map data = mydata![1][i.toString()];
+        if(data["a"] == mydata![2][i.toString()].toString()){
+          setState(() {
+            btncolor["a"] = right;
+          });
+        }else if(data["b"] == mydata![2][i.toString()].toString()){
+         setState(() {
+            btncolor["b"] = right;
+        });
+        }else if(data["c"] == mydata![2][i.toString()].toString()){
+          setState(() {
+            btncolor["c"] = right;
+          });
+        }else if(data["c"] == mydata![2][i.toString()].toString()){
+          setState(() {
+            btncolor["d"] = right;
+          });
+        }
+
+        // if(data.values.contains(mydata![2][i.toString()]) ){
+        //   print("KYS ${data["a"]}");
+
+        // }
+        // print("AVAV$data");
+        // print("Value ${mydata![2][i.toString()]}");
+      }
     }
     setState(() {
       btncolor[k] = colortoshow;
@@ -192,7 +194,7 @@ class _quizpageState extends State<quizpage> {
     });
     // nextquestion();
     // changed timer duration to 1 second
-    Timer(const Duration(seconds: 2), nextquestion);
+    Timer(const Duration(seconds: 1), nextquestion);
   }
 
   Widget choicebutton(String k) {

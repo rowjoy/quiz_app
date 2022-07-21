@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:quiz_app/custom_widget/answer_button.dart';
 import 'package:quiz_app/screen/resultpage.dart';
 import 'package:quiz_app/utils/colors.dart';
 import 'dart:math';
@@ -32,6 +33,8 @@ class _quizpageState extends State<quizpage> {
   int j = 1;
   int timer = 30;
   String showtimer = "30";
+  List? random_array;
+  int questionCounter = 1;
 
 
   Map<String, Color> btncolor = {
@@ -45,13 +48,12 @@ class _quizpageState extends State<quizpage> {
 
   genrandomarray(){
     var distinctIds = [];
-    List? random_array;
     // ignore: unnecessary_new
     var rand = new Random();
       for (int i = 0; ;) {
       distinctIds.add(rand.nextInt(10));
         random_array = distinctIds.toSet().toList();
-        if(random_array.length < 10){
+        if(random_array!.length < 10){
           continue;
         }else{
           break;
@@ -96,8 +98,10 @@ class _quizpageState extends State<quizpage> {
     canceltimer = false;
     timer = 30;
     setState(() {
-      if (i < 10) {
-        i++;
+      if (j < 10) {
+        i = random_array![j];
+        j++;
+        questionCounter ++;
       } else {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
           builder: (context) => resultpage(marks: marks),
@@ -171,12 +175,9 @@ class _quizpageState extends State<quizpage> {
           maxLines: 1,
         ),
         color: btncolor[k],
-        splashColor: Colors.indigo[700],
-        highlightColor: Colors.indigo[700],
         minWidth: MediaQuery.of(context).size.width,
         height: 45.0,
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
       ),
     );
   }
@@ -193,7 +194,8 @@ class _quizpageState extends State<quizpage> {
             child: Container(
               padding: const EdgeInsets.all(15.0),
               alignment: Alignment.bottomLeft,
-              child: Text( "($i) " + "${mydata![0][i.toString()]}",
+              // ignore: prefer_adjacent_string_concatenation
+              child: Text( "($questionCounter) " + "${mydata![0][i.toString()]}",
                 style: TextStyle(
                   color: AppColor.whiteColor,
                   fontSize: 16.0,
@@ -210,11 +212,12 @@ class _quizpageState extends State<quizpage> {
                   child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
+                    children:[
                       choicebutton('a'),
                       choicebutton('b'),
                       choicebutton('c'),
                       choicebutton('d'),
+
                     ],
                   ),
                 ),

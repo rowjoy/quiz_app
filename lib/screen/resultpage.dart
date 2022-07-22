@@ -16,8 +16,8 @@ class resultpage extends StatefulWidget {
 class _resultpageState extends State<resultpage> {
 
   List<String> images = [
-    "images/success.png",
-    "images/good.png",
+    "images/success.jpg",
+    "images/good.jpg",
     "images/sad.png",
   ];
 

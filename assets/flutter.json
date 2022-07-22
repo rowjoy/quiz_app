@@ -1,0 +1,176 @@
+[
+    {   
+        "0": "Which of the following widgets used for repeating the content?",
+        "1": "What operating systems can you install the Flutter development environment on?",
+        "2": "Which of the following widgets use for layout ?",
+        "3": "Which of these functions contain the code which houses the widgets of your app?",
+        "4": "Due to App Store restrictions on dynamic code execution, Flutter apps use __________ compilation on iOS.",
+        "5": "Which of these is NOT a pro for Flutter?",
+        "6": "Flutter uses one code base",
+        "7": "Flutter cannot be used to develop apps for which of the following?",
+        "8": "What are build modes in flutter?",
+        "9": "List different types of widgets available in Flutter?",
+        "10": "What are the best editors for flutter development?",
+        "11" : "Flutter’s engine, written primarily in C++, provides low-level rendering support using Google’s Skia graphics library.",
+        "12": " A notable feature of the Dart platform is its support for hot reload",
+        "13": "What is Flutter?",
+        "14": "Is Flutter Free?",
+        "15": "Which of these mobile apps runs on Flutter?",
+        "16": "What is the name of the command you use to verify you have setup your flutter environment correctly?",
+        "17": "Which company created Dart?",
+        "18": "Flutter is an app development library",
+        "19": "Which company developed Flutter?",
+        "20" : "Which one of the following is a disadvantage of flutter?"
+    },
+    {
+        "0": {
+            "a": "Expanded",
+            "b": "ListView",
+            "c": "Stack",
+            "d": "Scaffold"
+        },
+        "1": {
+            "a": "Windows",
+            "b": "Mac",
+            "c": "Linux",
+            "d": "All Of above"
+        },
+        "2": {
+            "a": "Text",
+            "b": "Column",
+            "c": "Expanded",
+            "d": "Inkwell"
+        },
+        "3": {
+            "a": "debug()",
+            "b": "runApp()",
+            "c": "random()",
+            "d": "build()"
+        },
+        "4": {
+            "a": "Ahead-of-time (AOT)",
+            "b": "ahed-of-code (AOC)",
+            "c": "Both A & B",
+            "d": "none of the above"
+        },
+        "5": {
+            "a": "free and open source",
+            "b": "Highly productive",
+            "c": "iOS and Android single codebase",
+            "d": "More testing"
+        },
+        "6": {
+            "a": "True",
+            "b": "Flse",
+            "c": "False",
+            "d": "Teur"
+        },
+        "7": {
+            "a": "Web",
+            "b": "Mobile",
+            "c": "Voice Assistants",
+            "d": "Desktop"
+        },
+        "8": {
+            "a": "Debug",
+            "b": "Profile",
+            "c": "Release",
+            "d": "All the above"
+        },
+        "9": {
+            "a": "stateless",
+            "b": "statefull",
+            "c": "Both A & B",
+            "d": "none of the above"
+        },
+        "10": {
+            "a": "Android studio",
+            "b": "visual studio",
+            "c": "intelliJ IDEA",
+            "d": "Xcode"
+        },
+        "11": {
+            "a": "True",
+            "b": "False",
+            "c": "No",
+            "d": "intelliJ IDEA"
+        },
+        "12": {
+            "a": "Yes",
+            "b": "No",
+            "c": "False",
+            "d": "True"
+        },
+        "13": {
+            "a": "Flutter is used to make desktop apps",
+            "b": "Flutter is a UI toolkit made by Apple",
+            "c": "Flutter is a UI toolkit used for creating high quality apps",
+            "d": "Flutter is the same as Java"
+        },
+        "14": {
+            "a": "Yes",
+            "b": "No",
+            "c": "True",
+            "d": "False"
+        },
+        "15": {
+            "a": "Google Docs",
+            "b": "Google Stadia",
+            "c": "Microsoft Excel for iPad",
+            "d": "Google Chrome"
+        },
+        "16": {
+            "a": "flutter run",
+            "b": "flutter doctor",
+            "c": "flutter surgeon",
+            "d": "dart export"
+        },
+        "17": {
+            "a": "Microsoft",
+            "b": "Twitter",
+            "c": "Apache",
+            "d": "Google"
+        },
+        "18": {
+            "a": "True",
+            "b": "False",
+            "c": "No",
+            "d": "Yes"
+        },
+        "19": {
+            "a": "Microsoft",
+            "b": "Facebook",
+            "c": "Google",
+            "d": "Amazon"
+        },
+        "20": {
+            "a": "Hot Reload",
+            "b": "Hot Restart",
+            "c": "Increased App Size",
+            "d": "Increased Productivity"
+        }
+    },
+    {
+        "0":"ListView",
+        "1": "All Of above",
+        "2": "Column",
+        "3": "build()",
+        "4": "Ahead-of-time (AOT)",
+        "5": "More testing",
+        "6": "True",
+        "7": "Voice Assistants",
+        "8": "All the above",
+        "9": "Both A & B",
+        "10": "visual studio",
+        "11": "True",
+        "12": "True",
+        "13": "Flutter is a UI toolkit used for creating high quality apps",
+        "14": "Yes",
+        "15": "Google Stadia",
+        "16": "flutter doctor",
+        "17": "Google",
+        "18": "False",
+        "19": "Google",
+        "20": "Increased App Size"
+    }
+]

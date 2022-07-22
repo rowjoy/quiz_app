@@ -1,88 +1,176 @@
 [
-    {
-        "1": "What Will Be The Output Of the Following Code ?\nif(1 + 1 + 1 + 1 + 1 == 5){\n\tSystem.out.print(\"TRUE\");\n}\n\telse{\n\tSystem.out.print(\"FALSE\");\n};",
-        "2": "Which function finds out the Variable type in Python ? 2",
-        "3": "Which of the following keyword is used to define a function in Python ? 3",
-        "4": "Which of the following is a print Function in Python ? 4",
-        "5": "Which function finds out the Variable type in Python ? 5",
-        "6": "Which of the following keyword is used to define a function in Python ? 6",
-        "7": "Which function finds out the Variable type in Python ? 7",
-        "8": "Which of the following keyword is used to define a function in Python ?  8",
-        "9": "Which function finds out the Variable type in Python ? 9",
-        "10": "Which of the following keyword is used to define a function in Python ? 10"
+    {   
+        "0": "",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": "",
+        "10": "",
+        "11" : "",
+        "12": "",
+        "13": "",
+        "14": "",
+        "15": "",
+        "16": "",
+        "17": "",
+        "18": "",
+        "19": "",
+        "20" : ""
     },
     {
+        "0": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
         "1": {
-            "a": "TRUE",
-            "b": "BOTH",
-            "c": "ERROR",
-            "d": "FALSE"
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
         },
         "2": {
-            "a": "typedef",
-            "b": "typeof",
-            "c": "type",
-            "d": "find"
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
         },
         "3": {
-            "a": "func",
-            "b": "def",
-            "c": "void",
-            "d": "function"
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
         },
         "4": {
-            "a": "cout",
-            "b": "print",
-            "c": "println",
-            "d": "stderr"
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
         },
         "5": {
-            "a": "typedef",
-            "b": "typeof",
-            "c": "type",
-            "d": "find"
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
         },
         "6": {
-            "a": "func",
-            "b": "def",
-            "c": "void",
-            "d": "function"
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
         },
         "7": {
-            "a": "typedef",
-            "b": "typeof",
-            "c": "type",
-            "d": "find"
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
         },
         "8": {
-            "a": "func",
-            "b": "def",
-            "c": "void",
-            "d": "function"
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
         },
         "9": {
-            "a": "typedef",
-            "b": "typeof",
-            "c": "type",
-            "d": "find"
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
         },
         "10": {
-            "a": "func",
-            "b": "def",
-            "c": "void",
-            "d": "function"
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "11": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "12": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "13": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "14": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "15": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "16": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "17": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "18": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "19": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
+        },
+        "20": {
+            "a": "",
+            "b": "",
+            "c": "",
+            "d": ""
         }
     },
     {
-        "1": "TRUE",
-        "2": "type",
-        "3": "def",
-        "4": "print",
-        "5": "type",
-        "6": "def",
-        "7": "type",
-        "8": "def",
-        "9": "type",
-        "10": "def"
+        "0":"",
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": "",
+        "10": "",
+        "11": "",
+        "12": "",
+        "13": "",
+        "14": "",
+        "15": "",
+        "16": "",
+        "17": "",
+        "18": "",
+        "19": "",
+        "20": ""
     }
 ]

@@ -1,135 +1,136 @@
 [
     {   
-        "0": "22 number question https://mcqpoint.com/mcq/flutter/",
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11" : "",
-        "12": "",
-        "13": "",
-        "14": "",
-        "15": "",
-        "16": "",
-        "17": "",
-        "18": "",
+        "0": "Flutter supports cross platform development",
+        "1": "A notable feature of the Dart platform is it doesn't support for hot reload ",
+        "2": "Flutter apps are written in the __________ language and make use of many of the language's more advanced features.",
+        "3": "What are the advantages of Flutter",
+        "4": "What was the boy chasing?",
+        "5": "Flutter is used to develop applications for __________ .",
+        "6": "Flutter is only supported on Windows.",
+        "7": "Are stateless widgets mutable or immutable?",
+        "8": "Enlist Some Major Features in flutter?",
+        "9": "Name the popular database package used in the Flutter?",
+        "10": "The first version of Flutter was known as codename __________ and ran on the Android operating system.",
+        "11" : "Flutter use platform primitives",
+        "12": "Flutter is developed by Facebook",
+        "13": "Flutter is an __________ mobile application development framework created by Google.",
+        "14": "Flutter is a",
+        "15": "Code written on Flutter requires Javascript Interpretter",
+        "16": "Flutter doesn't support 60fps animations",
+        "17": "Flutter was initially released in which year?",
+        "18": "https://www.vskills.in/practice/dart-language-mock-test",
         "19": "",
         "20" : ""
     },
     {
         "0": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "True",
+            "b": "False",
+            "c": "Ture",
+            "d": "No"
         },
         "1": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "True",
+            "b": "False",
+            "c": "True",
+            "d": "No"
         },
         "2": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "C",
+            "b": "Dart",
+            "c": "C++",
+            "d": "Swift"
         },
         "3": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Cross-platform Development",
+            "b": "Faster Development",
+            "c": "UI Focused",
+            "d": "All of the above"
         },
         "4": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "frog",
+            "b": "bee",
+            "c": "butterfly",
+            "d": "All of above"
         },
         "5": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "none of the above",
+            "b": "Android",
+            "c": "IOS",
+            "d": "Both( IOS and Android)"
         },
         "6": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "True",
+            "b": "Yes",
+            "c": "No",
+            "d": "False"
         },
         "7": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "mutable",
+            "b": "True",
+            "c": "False",
+            "d": "immutable"
+
         },
         "8": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Fast Development",
+            "b": "Expressive and flexible",
+            "c": "Native Performance",
+            "d": "All the above"
         },
         "9": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "sqflite database",
+            "b": "Firebase database",
+            "c": "Both a & b",
+            "d": "None"
         },
         "10": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Sky",
+            "b": "Cloud",
+            "c": "Rain",
+            "d": "Flut"
         },
         "11": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "True",
+            "b": "False",
+            "c": "Yes",
+            "d": "No"
         },
         "12": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "True",
+            "b": "False",
+            "c": "Ture",
+            "d": "Flase"
         },
         "13": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Open-source",
+            "b": "Shareware",
+            "c": "Both",
+            "d": "None of the above"
         },
         "14": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Programming Language",
+            "b": "SDK",
+            "c": "Both",
+            "d": "None of the above"
         },
         "15": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "False",
+            "b": "True",
+            "c": "Both",
+            "d": "None of the above"
         },
         "16": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "False",
+            "b": "No",
+            "c": "Both",
+            "d": "True"
         },
         "17": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "2018",
+            "b": "2017",
+            "c": "2014",
+            "d": "2016"
         },
         "18": {
             "a": "",
@@ -151,24 +152,24 @@
         }
     },
     {
-        "0":"",
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": "",
-        "15": "",
-        "16": "",
-        "17": "",
+        "0":"True",
+        "1": "False",
+        "2": "Dart",
+        "3": "All of the above",
+        "4": "butterfly",
+        "5": "Both( IOS and Android)",
+        "6": "False",
+        "7": "immutable",
+        "8": "All the above",
+        "9": "Both a & b",
+        "10": "Sky",
+        "11": "False",
+        "12": "False",
+        "13": "Open-source",
+        "14": "SDK",
+        "15": "False",
+        "16": "False",
+        "17": "2017",
         "18": "",
         "19": "",
         "20": ""

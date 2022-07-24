@@ -18,9 +18,9 @@
         "15": "Code written on Flutter requires Javascript Interpretter",
         "16": "Flutter doesn't support 60fps animations",
         "17": "Flutter was initially released in which year?",
-        "18": "https://www.vskills.in/practice/dart-language-mock-test",
-        "19": "",
-        "20" : ""
+        "18": "Dart is originally developed by?",
+        "19": "Dart is an?",
+        "20" : "Dart is an Object-Oriented language.?"
     },
     {
         "0": {
@@ -133,22 +133,22 @@
             "d": "2016"
         },
         "18": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Microsoft",
+            "b": "Google",
+            "c": "IBM",
+            "d": "Facebook"
         },
         "19": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "open-source",
+            "b": "general-purpose",
+            "c": "programming language",
+            "d": "All of the above"
         },
         "20": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Yes",
+            "b": "No",
+            "c": "Can not say",
+            "d": "Can be yes or no"
         }
     },
     {
@@ -170,8 +170,8 @@
         "15": "False",
         "16": "False",
         "17": "2017",
-        "18": "",
-        "19": "",
-        "20": ""
+        "18": "Google",
+        "19": "All of the above",
+        "20": "Yes"
     }
 ]

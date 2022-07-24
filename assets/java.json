@@ -1,176 +1,179 @@
 [
     {   
-        "0": "",
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11" : "",
-        "12": "",
-        "13": "",
-        "14": "",
-        "15": "",
-        "16": "",
-        "17": "",
-        "18": "",
-        "19": "",
-        "20" : ""
+       
+        "0": "Which of those doesn’t have an index based structure?",
+        "1": "java.util.Collections is a:",
+        "2": "Methods such as reverse, shuffle are offered in:",
+        "3": "Which of those allows duplicate elements?",
+        "4": "Which allows the storage of a null key and null values?",
+        "5": "Which interface should be implemented for sorting on basis of many criteria’s?",
+        "6": "What guarantees type-safety in a collection?",
+        "7": "HashSet internally uses?",
+        "8": "The most used interfaces from the collection framework are?",
+        "9": "The root interface of Java collection framework hierarchy is –",
+        "10": "Which of those is synchronized?",
+        "11" : "ArrayList implements that of the following?",
+        "12": "Which of those permits the storage of the many null values?",
+        "13": "nextIndex() and previousIndex() are methods of which interface?",
+        "14": "Vector extends that of these?",
+        "15": "LinkedList implements?",
+        "16": "In Iterator, nextElement() method of Enumeration has been changed to:",
+        "17": "Enumeration returned by Vector is?",
+        "18": "From Java five onwards, that one among these is suggested to replace Hashtable?",
+        "19": "Which doesn’t permit to store a null value?",
+        "20" : "What describes an algorithm performs in best, average or worse case scenarios?"
     },
     {
         "0": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "List",
+            "b": "Set",
+            "c": "Map",
+            "d": "Loop"
         },
         "1": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Class",
+            "b": "Interface",
+            "c": "Object",
+            "d": "None of the above"
         },
         "2": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Object",
+            "b": "Collection",
+            "c": "Collections",
+            "d": "Apache Commons Collections"
         },
         "3": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Set",
+            "b": "List",
+            "c": "All",
+            "d": "None of the above"
         },
         "4": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Hashtable",
+            "b": "HashMap",
+            "c": "None of the above",
+            "d": "For Loop"
         },
         "5": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Comparator",
+            "b": "Comparable",
+            "c": "Serializable",
+            "d": "None of the above"
         },
         "6": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Generics",
+            "b": "Abstract classes",
+            "c": "Interfaces",
+            "d": "Collection"
         },
         "7": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Set",
+            "b": "HashMap",
+            "c": "List",
+            "d": "Collection"
         },
         "8": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "List",
+            "b": "Map",
+            "c": "Set",
+            "d": "For"
         },
         "9": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Collection",
+            "b": "Root",
+            "c": "Collections",
+            "d": "List/Set"
         },
         "10": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "ArrayList",
+            "b": "LinkedList",
+            "c": "Vector",
+            "d": "None of the above"
         },
         "11": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "List",
+            "b": "RandomAccess",
+            "c": "Cloneable",
+            "d": "All of these"
         },
         "12": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Set",
+            "b": "List",
+            "c": "None of these",
+            "d": "All of these"
         },
         "13": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "IndexIterator",
+            "b": "Inerator",
+            "c": "ListIterator",
+            "d": "NextPreviousIterator"
         },
         "14": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "ArrayList",
+            "b": "LinkedList",
+            "c": "AbstractList",
+            "d": "None"
         },
         "15": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Deque",
+            "b": "List",
+            "c": "None of the above",
+            "d": "Both of adove"
         },
         "16": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "next()",
+            "b": "genNext()",
+            "c": "returnNext()",
+            "d": "name remains same"
         },
         "17": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "fail-fast",
+            "b": "fail-safe",
+            "c": "none",
+            "d": "Loop"
         },
         "18": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "ConcurrentHashMap",
+            "b": "HashMap",
+            "c": "ConcurrentHashtable",
+            "d": "None"
         },
         "19": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "TreeSet",
+            "b": "LinkedHashSet",
+            "c": "HashSet",
+            "d": "None"
         },
         "20": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Big-B",
+            "b": "Big-O",
+            "c": "Big-Data",
+            "d": "Big-N"
         }
     },
     {
-        "0":"",
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": "",
-        "15": "",
-        "16": "",
-        "17": "",
-        "18": "",
-        "19": "",
-        "20": ""
+        "0":"Set",
+        "1": "Class",
+        "2": "Collections",
+        "3": "List",
+        "4": "HashMap",
+        "5": "Comparator",
+        "6": "Generics",
+        "7": "Set",
+        "8": "Map",
+        "9": "List/Set",
+        "10": "Vector",
+        "11": "All of these",
+        "12": "All of these",
+        "13": "Inerator",
+        "14": "AbstractList",
+        "15": "Both of adove",
+        "16": "name remains same",
+        "17": "fail-fast",
+        "18": "HashMap",
+        "19": "TreeSet",
+        "20": "Big-O"
+        
     }
 ]
+

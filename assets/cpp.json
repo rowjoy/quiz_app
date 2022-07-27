@@ -1,176 +1,176 @@
 [
     {   
-        "0": "",
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11" : "",
-        "12": "",
-        "13": "",
-        "14": "",
-        "15": "",
-        "16": "",
-        "17": "",
-        "18": "",
-        "19": "",
-        "20" : ""
+        "0": "C++ was developed by ___",
+        "1": "Which one of the following is a keyword?",
+        "2": "____ is the smallest individual unit in a program.",
+        "3": "What is a constant that contains a single character enclosed within single quotes?",
+        "4": "The modulus operator uses ___ character.",
+        "5": "Every variable should be separated by ___ separator.",
+        "6": "Auto, static, extern and register are called as ___",
+        "7": "How many storage specifies are there in a C++?",
+        "8": "Signed, unsigned, long and short are some of the ___",
+        "9": "Logical AND (&&) and Logical OR (||) are ___ operators.",
+        "10": "____ operators have lower precedence to relational and arithmetic operators.",
+        "11" : "How many C++ data types are broadly classified?",
+        "12": "Float and double are related to ____ data type.",
+        "13": "Variable names must begin with ___",
+        "14": "Integer values are stored in ___ bit format in binary form.",
+        "15": "Rick Mascitti coined the name ___",
+        "16": "____ is a sequence of characters surrounded by double quotes.",
+        "17": "____ is an operator which returns the memory size requirements in terms of bytes.",
+        "18": "What are shift operators?",
+        "19": "____ class is another qualifier that can be added to a variable declaration.",
+        "20" : "____ storage class global variable known to all functions in the current program."
     },
     {
         "0": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Thomas Kushz",
+            "b": "John Kemney",
+            "c": "Bjarne Stroutstrup",
+            "d": "James Goling"
         },
         "1": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Size",
+            "b": "Key",
+            "c": "Jump",
+            "d": "Switch"
         },
         "2": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Variable",
+            "b": "Control",
+            "c": "Character",
+            "d": "Token"
         },
         "3": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Character",
+            "b": "Numeric",
+            "c": "Fixed",
+            "d": "Floating point"
         },
         "4": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "+",
+            "b": "*",
+            "c": "\\",
+            "d": "%"
         },
         "5": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Dot",
+            "b": "Colon",
+            "c": "Comma",
+            "d": "Semicolon"
         },
         "6": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Static",
+            "b": "Register",
+            "c": "Auto",
+            "d": "Storage specifier"
         },
         "7": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "2",
+            "b": "3",
+            "c": "4",
+            "d": "5"
         },
         "8": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Void",
+            "b": "Data",
+            "c": "Derived data",
+            "d": "Modifiers"
         },
         "9": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Logical",
+            "b": "Equality",
+            "c": "Class member",
+            "d": "Comma"
         },
         "10": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Conditional",
+            "b": "Boolean",
+            "c": "Logical",
+            "d": "Relational"
         },
         "11": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "2",
+            "b": "3",
+            "c": "4",
+            "d": "5"
         },
         "12": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Void",
+            "b": "Floting",
+            "c": "Fixed",
+            "d": "Integral"
         },
         "13": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "#",
+            "b": "$",
+            "c": "Number",
+            "d": "Letter"
         },
         "14": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "8",
+            "b": "16",
+            "c": "32",
+            "d": "64"
         },
         "15": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Visual BASIC",
+            "b": "COBOL",
+            "c": "C++",
+            "d": "BASIC"
         },
         "16": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Constant",
+            "b": "Numeric",
+            "c": "Character",
+            "d": "String literal"
         },
         "17": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Double",
+            "b": "Size",
+            "c": "Size of",
+            "d": "Long"
         },
         "18": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "<<",
+            "b": ">>",
+            "c": ">",
+            "d": "Both (a) and (b)"
         },
         "19": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Register",
+            "b": "Static",
+            "c": "Sub",
+            "d": "Storage"
         },
         "20": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Register",
+            "b": "Extern",
+            "c": "Static",
+            "d": "Auto"
         }
     },
     {
-        "0":"",
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": "",
-        "15": "",
-        "16": "",
-        "17": "",
-        "18": "",
-        "19": "",
-        "20": ""
+        "0":"Bjarne Stroutstrup",
+        "1": "Switch",
+        "2": "Token",
+        "3": "Character",
+        "4": "%",
+        "5": "Comma",
+        "6": "Storage specifier",
+        "7": "4",
+        "8": "Modifiers",
+        "9": "Logical",
+        "10": "Relational",
+        "11": "3",
+        "12": "Floting",
+        "13": "Letter",
+        "14": "16",
+        "15": "C++",
+        "16": "String literal",
+        "17": "Size of",
+        "18": "Both (a) and (b)",
+        "19": "Storage",
+        "20": "Extern"
     }
 ]

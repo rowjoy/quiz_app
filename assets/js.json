@@ -1,176 +1,176 @@
 [
     {   
-        "0": "",
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11" : "",
-        "12": "",
-        "13": "",
-        "14": "",
-        "15": "",
-        "16": "",
-        "17": "",
-        "18": "",
-        "19": "",
-        "20" : ""
+        "0": "If you type the following code in the console window, what result will you get?\n3 > 2 > 1 === false;",
+        "1": "JavaScript is a ___ -side programming language?",
+        "2": "Which of the following will write the message “Hello DataFlair!” in an alert box?",
+        "3": "How do you find the minimum of x and y using JavaScript?",
+        "4": "Which of the following statements will throw an error?\nPlease select 1 correct answers",
+        "5": "If the value of x is 40, then what is the output of the following program?\n(x % 10 == 0)? console.log(“Divisible by 10”) : console.log(“Not divisible by 10”);",
+        "6": "Which JavaScript label catches all the values, except for the ones specified?",
+        "7": "Which are the correct “if” statements to execute certain code if “x” is equal to 2?",
+        "8": "What will the code return?\nBoolean(3 < 7)",
+        "9": "What is the output of the following code in the console?\nvar x = 0;\nfunction fun(){\n++x;\nthis.x = x;\nreturn x;\n}\nvar bar = new new fun;\nconsole.log(bar.x);",
+        "10": "Predict the result:\nvar bar = 1,\nfun = {};\nfun: {\nbar:2;\nx: ++bar;\n};\nfun.x + fun.bar + bar;",
+        "11" : "Determine the result – String(“Hello”) === “Hello”;",
+        "12": "What is the correct JavaScript syntax to print “DataFlair” in the console?",
+        "13": "Which of the following print content on the browser window?",
+        "14": "Which method will you use to round the number 24.76 to the nearest integer?",
+        "15": "Which of the following statements will show a message as well as ask for user input in a popup?",
+        "16": "Which of the following is an event listener in JavaScript?",
+        "17": "You are a web designer in your company and need to create a JavaScript project for form validation.\nWhat are the advantages that JavaScript provides for forms?",
+        "18": "What is the syntax of a “for” statement in JavaScript?",
+        "19": "Which of the given options is an incorrect variable name?",
+        "20" : "Javascript is an _______ language?"
     },
     {
         "0": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "True",
+            "b": "False",
+            "c": "No",
+            "d": "Ture"
         },
         "1": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Client",
+            "b": "Server",
+            "c": "Both",
+            "d": "None"
         },
         "2": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "alertBox(“Hello DataFlair!”);",
+            "b": "alert(Hello DataFlair!);",
+            "c": "msgAlert(“Hello DataFlair!”);",
+            "d": "alert(“Hello DataFlair!”);"
         },
         "3": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "min(x,y);",
+            "b": "Math.min(x,y)",
+            "c": "Math.min(xy)",
+            "d": "min(xy);"
         },
         "4": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "var fun = function bar( ){ }",
+            "b": "var fun = function bar{ }",
+            "c": "function fun( ){ }",
+            "d": "functions( ){ }"
         },
         "5": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "ReferenceError",
+            "b": "Divisible by 10",
+            "c": "Not divisible by 10",
+            "d": "None of the above"
         },
         "6": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "catch",
+            "b": "label",
+            "c": "try",
+            "d": "default"
         },
         "7": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "if(x 2)",
+            "b": "if(x = 2)",
+            "c": "if(x == 2)",
+            "d": "if(x != 2 )"
         },
         "8": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "True",
+            "b": "False",
+            "c": "No",
+            "d": "SyntaxError"
         },
         "9": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "ReferenceError",
+            "b": "undefined",
+            "c": "1",
+            "d": "TypeError"
         },
         "10": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "undefined",
+            "b": "5",
+            "c": "6",
+            "d": "NaN"
         },
         "11": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "true",
+            "b": "false",
+            "c": "SyntaxError",
+            "d": "No"
         },
         "12": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "print(“DataFlair”);",
+            "b": "console.print(“DataFlair”);",
+            "c": "log.console(“DataFlair”);",
+            "d": "console.log(“DataFlair”);"
         },
         "13": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "document.write(“print content”);",
+            "b": "response.write(“print content”);",
+            "c": "document.write(print content);",
+            "d": "write(“print content”);"
         },
         "14": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "round(24.76);",
+            "b": "rnd(24.76);",
+            "c": "Math.round(24.76);",
+            "d": "Math.rnd(24.76);"
         },
         "15": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "alert()",
+            "b": "prompt()",
+            "c": "confirm()",
+            "d": "message()"
         },
         "16": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "onclick",
+            "b": "blur",
+            "c": "click",
+            "d": "Click()"
         },
         "17": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Bandwidth conservation",
+            "b": "Form validation",
+            "c": "Increased user satisfaction",
+            "d": "All of the above"
         },
         "18": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "for(increment; condition; initialization)",
+            "b": "for(initialization, condition, increment)",
+            "c": "for(condition; initialization; increment)",
+            "d": "for(initialization; condition; increment)"
         },
         "19": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "javascript",
+            "b": "_javascript",
+            "c": "$javascript",
+            "d": "-javascript"
         },
         "20": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Object-Oriented",
+            "b": "Object-Based",
+            "c": "Procedural",
+            "d": "None of the above"
         }
     },
     {
-        "0":"",
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": "",
-        "15": "",
-        "16": "",
-        "17": "",
-        "18": "",
-        "19": "",
-        "20": ""
+        "0":"True",
+        "1": "Both",
+        "2": "alert(“Hello DataFlair!”);",
+        "3": "Math.min(x,y)",
+        "4": "var fun = function bar{ }",
+        "5": "Divisible by 10",
+        "6": "default",
+        "7": "if(x == 2)",
+        "8": "True",
+        "9": "TypeError",
+        "10": "NaN",
+        "11": "true",
+        "12": "console.log(“DataFlair”);",
+        "13": "document.write(“print content”);",
+        "14": "Math.round(24.76);",
+        "15": "prompt()",
+        "16": "click",
+        "17": "All of the above",
+        "18": "for(initialization; condition; increment)",
+        "19": "-javascript",
+        "20": "Object-Oriented"
     }
 ]

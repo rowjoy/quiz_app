@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:quiz_app/custom_widget/answer_button.dart';
+
 import 'package:quiz_app/screen/resultpage.dart';
 import 'package:quiz_app/utils/colors.dart';
 import 'dart:math';
@@ -22,7 +22,7 @@ class quizpage extends StatefulWidget {
 class _quizpageState extends State<quizpage> {
   final List? mydata;
   _quizpageState(this.mydata);
-
+  final box = GetStorage();
   Color colortoshow = AppColor.whiteColor;
   Color right = Colors.green;
   Color wrong = Colors.red;
@@ -51,9 +51,9 @@ class _quizpageState extends State<quizpage> {
     // ignore: unnecessary_new
     var rand = new Random();
       for (int i = 0; ;) {
-      distinctIds.add(rand.nextInt(10));
+      distinctIds.add(rand.nextInt(20));
         random_array = distinctIds.toSet().toList();
-        if(random_array!.length < 10){
+        if(random_array!.length < 20){
           continue;
         }else{
           break;
@@ -96,9 +96,9 @@ class _quizpageState extends State<quizpage> {
 
   void nextquestion() {
     canceltimer = false;
-    timer = 30;
+    timer = 100;
     setState(() {
-      if (j < 10) {
+      if (j < 20) {
         i = random_array![j];
         j++;
         questionCounter ++;
@@ -120,23 +120,26 @@ class _quizpageState extends State<quizpage> {
     if (mydata![2][i.toString()] == mydata![1][i.toString()][k]) {
       marks = marks + 5;
       colortoshow = right;
+      print("Yse");
     } else {
+      print("Not");
       colortoshow = wrong;
       if(mydata![1][i.toString()].toString().contains(mydata![2][i.toString()])){
+        print("Not1");
         Map data = mydata![1][i.toString()];
-        if(data["a"] == mydata![2][i.toString()].toString()){
+        if(data["a"].toString() == mydata![2][i.toString()].toString()){
           setState(() {
             btncolor["a"] = right;
           });
-        }else if(data["b"] == mydata![2][i.toString()].toString()){
+        }else if(data["b"].toString() == mydata![2][i.toString()].toString()){
          setState(() {
             btncolor["b"] = right;
         });
-        }else if(data["c"] == mydata![2][i.toString()].toString()){
+        }else if(data["c"].toString() == mydata![2][i.toString()].toString()){
           setState(() {
             btncolor["c"] = right;
           });
-        }else if(data["c"] == mydata![2][i.toString()].toString()){
+        }else if(data["d"].toString() == mydata![2][i.toString()].toString()){
           setState(() {
             btncolor["d"] = right;
           });
@@ -163,21 +166,25 @@ class _quizpageState extends State<quizpage> {
   Widget choicebutton(String k) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: MaterialButton(
-        onPressed: () => checkanswer(k),
-        child: Text("${mydata![1][i.toString()][k]}",
-          style:  TextStyle(
-            color: AppColor.prymeryColor,
-            fontWeight: FontWeight.bold,
-            fontFamily: "Alike",
-            fontSize: 16.0,
+      child: InkWell(
+        onTap: ()=>checkanswer(k),
+        child: Container(
+          padding: const EdgeInsets.all(15),
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            color: btncolor[k],
+            borderRadius: BorderRadius.circular(5),
+            border: Border.all(width: 2,color: AppColor.whiteColor)
           ),
-          maxLines: 1,
+          child: Text("${mydata![1][i.toString()][k]}",
+            style:  TextStyle(
+              color: AppColor.prymeryColor,
+              fontWeight: FontWeight.bold,
+              fontFamily: "Alike",
+              fontSize: 16.0,
+            ),
+          ),
         ),
-        color: btncolor[k],
-        minWidth: MediaQuery.of(context).size.width,
-        height: 45.0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
       ),
     );
   }
@@ -188,54 +195,46 @@ class _quizpageState extends State<quizpage> {
     return Scaffold(
       backgroundColor: AppColor.prymeryColor.withOpacity(0.9),
       body: Column(
+       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Expanded(
-            flex: 3,
-            child: Container(
-              padding: const EdgeInsets.all(15.0),
-              alignment: Alignment.bottomLeft,
-              // ignore: prefer_adjacent_string_concatenation
-              child: Text( "($questionCounter) " + "${mydata![0][i.toString()]}",
-                style: TextStyle(
-                  color: AppColor.whiteColor,
-                  fontSize: 16.0,
-                  fontFamily: "Quando",
-                ),
+          Container(
+            padding: const EdgeInsets.all(15.0),
+            alignment: Alignment.bottomLeft,
+            // ignore: prefer_adjacent_string_concatenation
+            child: Text( "($questionCounter) " + "${mydata![0][i.toString()]}",
+              style: TextStyle(
+                color: AppColor.whiteColor,
+                fontSize: 16.0,
+                fontFamily: "Quando",
               ),
             ),
           ),
-          Expanded(
-              flex: 6,
-              child: AbsorbPointer(
-                absorbing: disableAnswer,
-                  // ignore: avoid_unnecessary_containers
-                  child: Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children:[
-                      choicebutton('a'),
-                      choicebutton('b'),
-                      choicebutton('c'),
-                      choicebutton('d'),
+          AbsorbPointer(
+            absorbing: disableAnswer,
+              // ignore: avoid_unnecessary_containers
+              child: Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children:[
+                  choicebutton('a'),
+                  choicebutton('b'),
+                  choicebutton('c'),
+                  choicebutton('d'),
 
-                    ],
-                  ),
-                ),
+                ],
               ),
             ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              alignment: Alignment.topCenter,
-              child: Center(
-                child: Text(
-                  "Your answer time $showtimer",
-                  style: TextStyle(
-                    fontSize: 18.0,
-                    color: AppColor.whiteColor,
-                    fontWeight: FontWeight.w700,
-                    fontFamily: 'Times New Roman',
-                  ),
+          ),
+          Container(
+            alignment: Alignment.topCenter,
+            child: Center(
+              child: Text(
+                "Your answer time $showtimer",
+                style: TextStyle(
+                  fontSize: 18.0,
+                  color: AppColor.whiteColor,
+                  fontWeight: FontWeight.w700,
+                  fontFamily: 'Times New Roman',
                 ),
               ),
             ),

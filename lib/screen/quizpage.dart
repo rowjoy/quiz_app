@@ -22,16 +22,20 @@ class _getjsonState extends State<getjson> {
 
   // a function
   setasset() {
-    if (widget.langname == "Python") {
+    if (widget.langname == "Flutter") {
+      assettoload = "assets/flutter.json";
+    } else if (widget.langname == "Dart") {
+      assettoload = "assets/dart.json";
+    } else if (widget.langname == "Kotlin") {
+      assettoload = "assets/kotlin.json";
+    } else if (widget.langname == "Python") {
       assettoload = "assets/python.json";
-    } else if (widget.langname == "Java") {
+    } else if (widget.langname == "Java"){
       assettoload = "assets/java.json";
-    } else if (widget.langname == "Javascript") {
+    }else if(widget.langname == "Javascript"){
       assettoload = "assets/js.json";
-    } else if (widget.langname == "C++") {
+    }else if(widget.langname == "C++"){
       assettoload = "assets/cpp.json";
-    } else {
-      assettoload = "assets/linux.json";
     }
   }
 

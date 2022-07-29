@@ -26,11 +26,11 @@ late  String image;
 
   @override
   void initState(){
-    if(marks < 20){
+    if(marks < 40){
       image = images[2];
       // ignore: prefer_adjacent_string_concatenation
       message = "You Should Try Hard..\n" + "You Scored $marks";
-    }else if(marks < 35){
+    }else if(marks < 60){
       image = images[1];
       // ignore: prefer_adjacent_string_concatenation
       message = "You Can Do Better..\n" + "You Scored $marks";

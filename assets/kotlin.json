@@ -1,176 +1,176 @@
 [
     {   
-        "0": "",
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11" : "",
-        "12": "",
-        "13": "",
-        "14": "",
-        "15": "",
-        "16": "",
-        "17": "",
-        "18": "",
-        "19": "",
-        "20" : ""
+        "0": "Which keyword do you use to define a function in Kotlin?",
+        "1": "What are Booleans?",
+        "2": "What is the meaning of HTML?",
+        "3": "What does AI mean?",
+        "4": "Why do we need abstract class?",
+        "5": "When you use a data class, what functions will the compiler automatically provide?",
+        "6": "What is the best known programming language ever?",
+        "7": "Do booleans Need to be Capitalized on the first letter?",
+        "8": "Manakah OS di bawah ini yang Open Source?",
+        "9": "Which keyword used to create a mutable variable?",
+        "10": "Which is the right declaration to make a variable with the Character data type?",
+        "11" : "Which the right code to declare nullable variable in Kotlin?",
+        "12": "What value is 10 until 12",
+        "13": "What is Java used on?",
+        "14": "Which ways can you use for an HTML file?",
+        "15": "What stores data and its info?",
+        "16": "What language does a database use?",
+        "17": "Which of these can be used for programming?",
+        "18": "According to code convention, what format used for the function name?",
+        "19": "JavaScript and jQuery are related.",
+        "20" : "Code Editor yang digunakan untuk mengembangkan aplikasi Android Native?"
     },
     {
         "0": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "main",
+            "b": "fun",
+            "c": "function",
+            "d": "new"
         },
         "1": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "A question",
+            "b": "True and False",
+            "c": "A decision",
+            "d": "Percents"
         },
         "2": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Hypertext Making Language",
+            "b": "Hightext Markup Language",
+            "c": "Hypertext Markup Language",
+            "d": "All of above"
         },
         "3": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Artificial Intelligence",
+            "b": "Artificial Interrogation",
+            "c": "Interrogation",
+            "d": "Artificial"
         },
         "4": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "to inherited values from other classes",
+            "b": "to avoid creating instances of the class",
+            "c": "to not inherit values from other classes",
+            "d": "to create an instance of the class"
         },
         "5": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "paste(), toDouble(), notEquals()",
+            "b": "toString(), cut(), dan isEmpty()",
+            "c": "equals(), copy, dan toInt()",
+            "d": "copy(), equals, dan toString()"
         },
         "6": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Python",
+            "b": "Kotlin",
+            "c": "Java",
+            "d": "Sql"
         },
         "7": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Yes",
+            "b": "It depends",
+            "c": "No",
+            "d": "All of above"
         },
         "8": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Android",
+            "b": "Linux",
+            "c": "Mac OS",
+            "d": "Both A & B"
         },
         "9": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "var",
+            "b": "val",
+            "c": "const",
+            "d": "mutable"
         },
         "10": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "val char = 'ABC'",
+            "b": "val char = 'A'",
+            "c": "val char = 'A'",
+            "d": "val char = A"
         },
         "11": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "val text: String = null",
+            "b": "val text: String? = null",
+            "c": "val text: nullable = null",
+            "d": "val text: String"
         },
         "12": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "10 11 12",
+            "b": "10 11",
+            "c": "11 12",
+            "d": "All is wrong!"
         },
         "13": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Wifi Routers",
+            "b": "Blu-Ray Players",
+            "c": "Operating Systems",
+            "d": "All of above"
         },
         "14": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": ".htm",
+            "b": ".html",
+            "c": ".tml",
+            "d": "Both A & B"
         },
         "15": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "databank",
+            "b": "database",
+            "c": "datastore",
+            "d": "datakeeper"
         },
         "16": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "QSL",
+            "b": "SPL",
+            "c": "LSL",
+            "d": "SQL"
         },
         "17": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "HTML",
+            "b": "JavaScript",
+            "c": "Node.js",
+            "d": "All of above"
         },
         "18": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "camelCase",
+            "b": "PascalCase",
+            "c": "snake_case",
+            "d": "Kebab-case"
         },
         "19": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "True",
+            "b": "False",
+            "c": "Ture",
+            "d": "Flase"
         },
         "20": {
-            "a": "",
-            "b": "",
-            "c": "",
-            "d": ""
+            "a": "Android Studio",
+            "b": "XCode",
+            "c": "Vs code",
+            "d": "Sublime Text"
         }
     },
     {
-        "0":"",
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": "",
-        "15": "",
-        "16": "",
-        "17": "",
-        "18": "",
-        "19": "",
-        "20": ""
+        "0":"fun",
+        "1": "True and False",
+        "2": "Hypertext Markup Language",
+        "3": "Artificial Intelligence",
+        "4": "to avoid creating instances of the class",
+        "5": "copy(), equals, dan toString()",
+        "6": "Java",
+        "7": "Yes",
+        "8": "Both A & B",
+        "9": "var",
+        "10": "val char = 'A'",
+        "11": "val text: String? = null",
+        "12": "10 11",
+        "13": "All of above",
+        "14": "Both A & B",
+        "15": "database",
+        "16": "SQL",
+        "17": "All of above",
+        "18": "camelCase",
+        "19": "True",
+        "20": "Android Studio"
     }
 ]

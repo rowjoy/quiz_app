@@ -1,0 +1,345 @@
+[
+    {   
+        "0": "C++ was developed by ___",
+        "1": "Which one of the following is a keyword?",
+        "2": "____ is the smallest individual unit in a program.",
+        "3": "What is a constant that contains a single character enclosed within single quotes?",
+        "4": "The modulus operator uses ___ character.",
+        "5": "Every variable should be separated by ___ separator.",
+        "6": "Auto, static, extern and register are called as ___",
+        "7": "How many storage specifies are there in a C++?",
+        "8": "Signed, unsigned, long and short are some of the ___",
+        "9": "Logical AND (&&) and Logical OR (||) are ___ operators.",
+        "10": "____ operators have lower precedence to relational and arithmetic operators.",
+        "11" : "How many C++ data types are broadly classified?",
+        "12": "Float and double are related to ____ data type.",
+        "13": "Variable names must begin with ___",
+        "14": "Integer values are stored in ___ bit format in binary form.",
+        "15": "Rick Mascitti coined the name ___",
+        "16": "____ is a sequence of characters surrounded by double quotes.",
+        "17": "____ is an operator which returns the memory size requirements in terms of bytes.",
+        "18": "What are shift operators?",
+        "19": "____ class is another qualifier that can be added to a variable declaration.",
+        "20" : "____ storage class global variable known to all functions in the current program.",
+        "21": "Flutter supports cross platform development",
+        "22": "A notable feature of the Dart platform is it doesn't support for hot reload ",
+        "23": "Flutter apps are written in the __________ language and make use of many of the language's more advanced features.",
+        "24": "What are the advantages of Flutter",
+        "25": "What was the boy chasing?",
+        "26": "Flutter is used to develop applications for __________ .",
+        "27": "Flutter is only supported on Windows.",
+        "28": "Are stateless widgets mutable or immutable?",
+        "29": "Enlist Some Major Features in flutter?",
+        "30": "Name the popular database package used in the Flutter?",
+        "31": "The first version of Flutter was known as codename __________ and ran on the Android operating system.",
+        "32" : "Flutter use platform primitives",
+        "33": "Flutter is developed by Facebook",
+        "34": "Flutter is an __________ mobile application development framework created by Google.",
+        "35": "Flutter is a",
+        "36": "Code written on Flutter requires Javascript Interpretter",
+        "37": "Flutter doesn't support 60fps animations",
+        "38": "Flutter was initially released in which year?",
+        "39": "Dart is originally developed by?",
+        "40": "Dart is an?",
+        "41" : "Dart is an Object-Oriented language.?"
+    },
+    {
+        "0": {
+            "a": "Thomas Kushz",
+            "b": "John Kemney",
+            "c": "Bjarne Stroutstrup",
+            "d": "James Goling"
+        },
+        "1": {
+            "a": "Size",
+            "b": "Key",
+            "c": "Jump",
+            "d": "Switch"
+        },
+        "2": {
+            "a": "Variable",
+            "b": "Control",
+            "c": "Character",
+            "d": "Token"
+        },
+        "3": {
+            "a": "Character",
+            "b": "Numeric",
+            "c": "Fixed",
+            "d": "Floating point"
+        },
+        "4": {
+            "a": "+",
+            "b": "*",
+            "c": "\\",
+            "d": "%"
+        },
+        "5": {
+            "a": "Dot",
+            "b": "Colon",
+            "c": "Comma",
+            "d": "Semicolon"
+        },
+        "6": {
+            "a": "Static",
+            "b": "Register",
+            "c": "Auto",
+            "d": "Storage specifier"
+        },
+        "7": {
+            "a": "2",
+            "b": "3",
+            "c": "4",
+            "d": "5"
+        },
+        "8": {
+            "a": "Void",
+            "b": "Data",
+            "c": "Derived data",
+            "d": "Modifiers"
+        },
+        "9": {
+            "a": "Logical",
+            "b": "Equality",
+            "c": "Class member",
+            "d": "Comma"
+        },
+        "10": {
+            "a": "Conditional",
+            "b": "Boolean",
+            "c": "Logical",
+            "d": "Relational"
+        },
+        "11": {
+            "a": "2",
+            "b": "3",
+            "c": "4",
+            "d": "5"
+        },
+        "12": {
+            "a": "Void",
+            "b": "Floting",
+            "c": "Fixed",
+            "d": "Integral"
+        },
+        "13": {
+            "a": "#",
+            "b": "$",
+            "c": "Number",
+            "d": "Letter"
+        },
+        "14": {
+            "a": "8",
+            "b": "16",
+            "c": "32",
+            "d": "64"
+        },
+        "15": {
+            "a": "Visual BASIC",
+            "b": "COBOL",
+            "c": "C++",
+            "d": "BASIC"
+        },
+        "16": {
+            "a": "Constant",
+            "b": "Numeric",
+            "c": "Character",
+            "d": "String literal"
+        },
+        "17": {
+            "a": "Double",
+            "b": "Size",
+            "c": "Size of",
+            "d": "Long"
+        },
+        "18": {
+            "a": "<<",
+            "b": ">>",
+            "c": ">",
+            "d": "Both (a) and (b)"
+        },
+        "19": {
+            "a": "Register",
+            "b": "Static",
+            "c": "Sub",
+            "d": "Storage"
+        },
+        "20": {
+            "a": "Register",
+            "b": "Extern",
+            "c": "Static",
+            "d": "Auto"
+        },
+        "21": {
+            "a": "True",
+            "b": "False",
+            "c": "Ture",
+            "d": "No"
+        },
+        "22": {
+            "a": "True",
+            "b": "False",
+            "c": "True",
+            "d": "No"
+        },
+        "23": {
+            "a": "C",
+            "b": "Dart",
+            "c": "C++",
+            "d": "Swift"
+        },
+        "24": {
+            "a": "Cross-platform Development",
+            "b": "Faster Development",
+            "c": "UI Focused",
+            "d": "All of the above"
+        },
+        "25": {
+            "a": "frog",
+            "b": "bee",
+            "c": "butterfly",
+            "d": "All of above"
+        },
+        "26": {
+            "a": "none of the above",
+            "b": "Android",
+            "c": "IOS",
+            "d": "Both( IOS and Android)"
+        },
+        "27": {
+            "a": "True",
+            "b": "Yes",
+            "c": "No",
+            "d": "False"
+        },
+        "28": {
+            "a": "mutable",
+            "b": "True",
+            "c": "False",
+            "d": "immutable"
+
+        },
+        "29": {
+            "a": "Fast Development",
+            "b": "Expressive and flexible",
+            "c": "Native Performance",
+            "d": "All the above"
+        },
+        "30": {
+            "a": "sqflite database",
+            "b": "Firebase database",
+            "c": "Both a & b",
+            "d": "None"
+        },
+        "31": {
+            "a": "Sky",
+            "b": "Cloud",
+            "c": "Rain",
+            "d": "Flut"
+        },
+        "32": {
+            "a": "True",
+            "b": "False",
+            "c": "Yes",
+            "d": "No"
+        },
+        "33": {
+            "a": "True",
+            "b": "False",
+            "c": "Ture",
+            "d": "Flase"
+        },
+        "34": {
+            "a": "Open-source",
+            "b": "Shareware",
+            "c": "Both",
+            "d": "None of the above"
+        },
+        "35": {
+            "a": "Programming Language",
+            "b": "SDK",
+            "c": "Both",
+            "d": "None of the above"
+        },
+        "36": {
+            "a": "False",
+            "b": "True",
+            "c": "Both",
+            "d": "None of the above"
+        },
+        "37": {
+            "a": "False",
+            "b": "No",
+            "c": "Both",
+            "d": "True"
+        },
+        "38": {
+            "a": "2018",
+            "b": "2017",
+            "c": "2014",
+            "d": "2016"
+        },
+        "39": {
+            "a": "Microsoft",
+            "b": "Google",
+            "c": "IBM",
+            "d": "Facebook"
+        },
+        "40": {
+            "a": "open-source",
+            "b": "general-purpose",
+            "c": "programming language",
+            "d": "All of the above"
+        },
+        "41": {
+            "a": "Yes",
+            "b": "No",
+            "c": "Can not say",
+            "d": "Can be yes or no"
+        }
+    },
+    {
+        "0":"Bjarne Stroutstrup",
+        "1": "Switch",
+        "2": "Token",
+        "3": "Character",
+        "4": "%",
+        "5": "Comma",
+        "6": "Storage specifier",
+        "7": "4",
+        "8": "Modifiers",
+        "9": "Logical",
+        "10": "Relational",
+        "11": "3",
+        "12": "Floting",
+        "13": "Letter",
+        "14": "16",
+        "15": "C++",
+        "16": "String literal",
+        "17": "Size of",
+        "18": "Both (a) and (b)",
+        "19": "Storage",
+        "20": "Extern",
+        "21":"True",
+        "22": "False",
+        "23": "Dart",
+        "24": "All of the above",
+        "25": "butterfly",
+        "26": "Both( IOS and Android)",
+        "27": "False",
+        "28": "immutable",
+        "29": "All the above",
+        "30": "Both a & b",
+        "31": "Sky",
+        "32": "False",
+        "33": "False",
+        "34": "Open-source",
+        "35": "SDK",
+        "36": "False",
+        "37": "False",
+        "38": "2017",
+        "39": "Google",
+        "40": "All of the above",
+        "41": "Yes"
+    }
+]

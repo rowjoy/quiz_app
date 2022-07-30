@@ -41,7 +41,29 @@
         "38": "Flutter was initially released in which year?",
         "39": "Dart is originally developed by?",
         "40": "Dart is an?",
-        "41" : "Dart is an Object-Oriented language.?"
+        "41" : "Dart is an Object-Oriented language.?",
+        "42": "What are the best editors for flutter development?",
+        "43" : "Flutter’s engine, written primarily in C++, provides low-level rendering support using Google’s Skia graphics library.",
+        "44": " A notable feature of the Dart platform is its support for hot reload",
+        "45": "What is Flutter?",
+        "46": "Is Flutter Free?",
+        "47": "Which of these mobile apps runs on Flutter?",
+        "48": "What is the name of the command you use to verify you have setup your flutter environment correctly?",
+        "49": "Which company created Dart?",
+        "50": "Flutter is an app development library",
+        "51": "Which company developed Flutter?",
+        "52" : "Which one of the following is a disadvantage of flutter?",
+        "53": "Which of the following naming is the correct way to distinguish a private variable ‘password’ in a class?",
+        "54" : "Which module is imported to check if a word is a keyword?",
+        "55": "In the following code, the lines that can give an error are? [Name_1=’a’ , mail@1=’abc@mail’ ,pass=54321]",
+        "56": "Which of the following gives the output as False?",
+        "57": "Which of the following  is an invalid identifier?",
+        "58": "Which of the following is not a namespace in Python?",
+        "59": "How many types of namespaces and scopes exist in Python respectively?",
+        "60": "Which of the following is not true about built-in scoped variables?",
+        "61": "name=”PythonGeeks” \n print(id(name)) ",
+        "62": "How many namespaces can exist at a time?",
+        "63" : "Which of the following is the biggest scope?"
     },
     {
         "0": {
@@ -296,6 +318,138 @@
             "b": "No",
             "c": "Can not say",
             "d": "Can be yes or no"
+        },
+        "42": {
+            "a": "Android studio",
+            "b": "visual studio",
+            "c": "intelliJ IDEA",
+            "d": "Xcode"
+        },
+        "43": {
+            "a": "True",
+            "b": "False",
+            "c": "No",
+            "d": "intelliJ IDEA"
+        },
+        "44": {
+            "a": "Yes",
+            "b": "No",
+            "c": "False",
+            "d": "True"
+        },
+        "45": {
+            "a": "Flutter is used to make desktop apps",
+            "b": "Flutter is a UI toolkit made by Apple",
+            "c": "Flutter is a UI toolkit used for creating high quality apps",
+            "d": "Flutter is the same as Java"
+        },
+        "46": {
+            "a": "Yes",
+            "b": "No",
+            "c": "True",
+            "d": "False"
+        },
+        "47": {
+            "a": "Google Docs",
+            "b": "Google Stadia",
+            "c": "Microsoft Excel for iPad",
+            "d": "Google Chrome"
+        },
+        "48": {
+            "a": "flutter run",
+            "b": "flutter doctor",
+            "c": "flutter surgeon",
+            "d": "dart export"
+        },
+        "49": {
+            "a": "Microsoft",
+            "b": "Twitter",
+            "c": "Apache",
+            "d": "Google"
+        },
+        "50": {
+            "a": "True",
+            "b": "False",
+            "c": "No",
+            "d": "Yes"
+        },
+        "51": {
+            "a": "Microsoft",
+            "b": "Facebook",
+            "c": "Google",
+            "d": "Amazon"
+        },
+        "52": {
+            "a": "Hot Reload",
+            "b": "Hot Restart",
+            "c": "Increased App Size",
+            "d": "Increased Productivity"
+        },
+        "53": {
+            "a": "_password_",
+            "b": "__password",
+            "c": "password_",
+            "d": "None"
+        },
+        "54": {
+            "a": "Import keyword",
+            "b": "import Keywords",
+            "c": "import keyword",
+            "d": "Import Keywords"
+        },
+        "55": {
+            "a": "Line",
+            "b": "Line 1 and 2",
+            "c": "Line 2 and 3",
+            "d": "All the lines"
+        },
+        "56": {
+            "a": "First.isidentifier()",
+            "b": "keyword.iskeyword('in')",
+            "c": "'class'.isidentifier()",
+            "d": "'school.'.isidentifier()"
+        },
+        "57": {
+            "a": "nameofstd=’abc’",
+            "b": "Name of std=’abc’",
+            "c": "name_of_std=’abc’",
+            "d": "NameOfStd=’abc’"
+        },
+        "58": {
+            "a": "Built-in",
+            "b": "Global",
+            "c": "Non local",
+            "d": "Local"
+        },
+        "59": {
+            "a": "3 and 5",
+            "b": "3 and 4",
+            "c": "4 and 4",
+            "d": "4 and 3"
+        },
+        "60": {
+            "a": "They are available throughout the program",
+            "b": "They get loaded when they are called",
+            "c": "They need not be imported",
+            "d": "None of the above"
+        },
+        "61": {
+            "a": "name",
+            "b": "'name'",
+            "c": "“PythonGeeks’",
+            "d": "2717597645616"
+        },
+        "62": {
+            "a": "3",
+            "b": "1",
+            "c": "Any number of name spaces",
+            "d": "2"
+        },
+        "63": {
+            "a": "Global",
+            "b": "Built-in",
+            "c": "Local",
+            "d": "Enclosed"
         }
     },
     {
@@ -340,6 +494,28 @@
         "38": "2017",
         "39": "Google",
         "40": "All of the above",
-        "41": "Yes"
+        "41": "Yes",
+        "42": "visual studio",
+        "43": "True",
+        "44": "True",
+        "45": "Flutter is a UI toolkit used for creating high quality apps",
+        "46": "Yes",
+        "47": "Google Stadia",
+        "48": "flutter doctor",
+        "49": "Google",
+        "50": "False",
+        "51": "Google",
+        "52": "Increased App Size",
+        "53": "__password",
+        "54": "import keyword",
+        "55": "Line 2 and 3",
+        "56": "'school.'.isidentifier()",
+        "57": "Name of std=’abc’",
+        "58": "Non local",
+        "59": "3 and 4",
+        "60": "They get loaded when they are called",
+        "61": "2717597645616",
+        "62": "Any number of name spaces",
+        "63": "Built-in"
     }
 ]

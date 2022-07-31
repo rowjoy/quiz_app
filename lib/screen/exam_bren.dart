@@ -11,15 +11,15 @@ import 'dart:async';
 
 
 // ignore: camel_case_types
-class quizpage extends StatefulWidget {
+class Examquizpage extends StatefulWidget {
   final List? mydata;
 
-  const quizpage({Key? key, required this.mydata}) : super(key: key);
+  const Examquizpage({Key? key, required this.mydata}) : super(key: key);
   @override
   _quizpageState createState() => _quizpageState(mydata);
 }
 // ignore: camel_case_types
-class _quizpageState extends State<quizpage> {
+class _quizpageState extends State<Examquizpage> {
   final List? mydata;
   _quizpageState(this.mydata);
   final box = GetStorage();
@@ -47,13 +47,16 @@ class _quizpageState extends State<quizpage> {
   bool canceltimer = false;
 
   genrandomarray(){
-     var rand = new Random();
+    // ignore: unnecessary_new
+    var rand = new Random();
+    List list = List.generate(60, (_) => rand.nextInt(60));
     var distinctIds = [];
+    print(distinctIds);
     // ignore: unnecessary_new
       for (int i = 0; ;) {
-      distinctIds.add(rand.nextInt(20));
+      distinctIds.add(list);
         random_array = distinctIds.toSet().toList();
-        if(random_array!.length < 20){
+        if(random_array!.length < 60){
           continue;
         }else{
           break;

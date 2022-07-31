@@ -15,4 +15,5 @@ List <Color> colorsList = [
   const Color(0xffEA7900),
   const Color(0xffEFB545),
   const Color(0xff445476),
+  const Color(0xffCA0035).withOpacity(0.9),
 ];

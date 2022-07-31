@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 
+import '../data/keys.dart';
 import '../screen/quizpage.dart';
 import '../utils/colors.dart';
 class Customcard extends StatelessWidget {
-  const Customcard({
+  final box = GetStorage();
+  Customcard({
     Key? key,
     required this.context,
     required this.langname,
@@ -30,6 +33,8 @@ class Customcard extends StatelessWidget {
             // for a particular language
             builder: (context) => getjson(langname),
           ));
+          box.write(Keys.lanName, langname);
+          print(box.read(Keys.lanName));
         },
         child: Material(
           color:color,

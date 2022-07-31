@@ -7,7 +7,7 @@ class Datas {
     "images/py.png",
     "images/java.png",
     "images/js.png",
-    "images/cpp.png",
+    "images/cpp.png"
 
   ];
 
@@ -28,7 +28,7 @@ class Datas {
     "Python",
     "Java",
     "Javascript",
-    "C++"
+    "C++",
   ];
 
 }

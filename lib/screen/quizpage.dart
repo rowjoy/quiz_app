@@ -4,6 +4,9 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:quiz_app/data/keys.dart';
+import 'package:quiz_app/screen/exam_bren.dart';
 import 'package:quiz_app/screen/quiz_bren.dart';
 
 
@@ -19,6 +22,7 @@ class getjson extends StatefulWidget {
 
 class _getjsonState extends State<getjson> {
  late String assettoload;
+ final box = GetStorage();
 
   // a function
   setasset() {
@@ -36,6 +40,8 @@ class _getjsonState extends State<getjson> {
       assettoload = "assets/js.json";
     }else if(widget.langname == "C++"){
       assettoload = "assets/cpp.json";
+    }else if(widget.langname == "Exam"){
+       assettoload = "assets/exam.json";
     }
   }
 
@@ -53,7 +59,7 @@ class _getjsonState extends State<getjson> {
         builder: (context, snapshot) {
           if(snapshot.hasData){
             List? mydata = json.decode(snapshot.data.toString());
-            return quizpage(mydata: mydata ?? [] );
+            return  quizpage(mydata: mydata ?? [] );
           }else if(snapshot.hasError){
             Navigator.canPop(context);
     

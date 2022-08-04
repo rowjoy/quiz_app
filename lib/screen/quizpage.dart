@@ -1,4 +1,4 @@
-// ignore_for_file: no_logic_in_create_state, non_constant_identifier_names, prefer_typing_uninitialized_variables, camel_case_types, must_be_immutable, prefer_const_constructors
+// ignore_for_file: no_logic_in_create_state, non_constant_identifier_names, prefer_typing_uninitialized_variables, camel_case_types, must_be_immutable, prefer_const_constructors, deprecated_member_use
 
 
 import 'dart:convert';
@@ -50,8 +50,27 @@ class _getjsonState extends State<getjson> {
     setasset();
     return WillPopScope(
       onWillPop: () async {
-          final snack = SnackBar(content: Text('Please complete your exam'),duration: Duration(seconds: 2),);
-          ScaffoldMessenger.of(context).showSnackBar(snack);
+          // final snack = SnackBar(content: Text('Please complete your exam'),duration: Duration(seconds: 2),);
+          // ScaffoldMessenger.of(context).showSnackBar(snack);
+          showDialog(
+            context: context,
+            builder: (_) => AlertDialog(
+              title: Text('You start quiz'),
+              content: Text(
+                'You close quiz exam  please press exit',
+              ),
+              actions: [
+                FlatButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Text(
+                        'Ok',
+                  ),
+                ),
+              ],
+            ),
+          );
          return  false;
       },
       child: FutureBuilder(

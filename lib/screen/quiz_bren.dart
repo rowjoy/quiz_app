@@ -1,4 +1,4 @@
-// ignore_for_file: no_logic_in_create_state, non_constant_identifier_names
+// ignore_for_file: no_logic_in_create_state, non_constant_identifier_names, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -228,14 +228,27 @@ class _quizpageState extends State<quizpage> {
           Container(
             alignment: Alignment.topCenter,
             child: Center(
-              child: Text(
-                "Your answer time $showtimer",
-                style: TextStyle(
-                  fontSize: 18.0,
-                  color: AppColor.whiteColor,
-                  fontWeight: FontWeight.w700,
-                  fontFamily: 'Times New Roman',
-                ),
+              child: Row(
+                children: [
+                  Text(
+                  "Your answer time $showtimer",
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      color: AppColor.whiteColor,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Times New Roman',
+                    ),
+                  ),
+                  // ignore: deprecated_member_use
+                  FlatButton(
+                      onPressed: () {
+                        nextquestion();
+                      },
+                      child: Text(
+                        'Skip',
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

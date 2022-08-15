@@ -1,8 +1,9 @@
-// ignore_for_file: no_logic_in_create_state, non_constant_identifier_names, prefer_const_constructors
+// ignore_for_file: no_logic_in_create_state, non_constant_identifier_names, prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:quiz_app/screen/home.dart';
 
 import 'package:quiz_app/screen/resultpage.dart';
 import 'package:quiz_app/utils/colors.dart';
@@ -11,15 +12,15 @@ import 'dart:async';
 
 
 // ignore: camel_case_types
-class quizpage extends StatefulWidget {
+class quizBren extends StatefulWidget {
   final List? mydata;
 
-  const quizpage({Key? key, required this.mydata}) : super(key: key);
+  const quizBren({Key? key, required this.mydata}) : super(key: key);
   @override
   _quizpageState createState() => _quizpageState(mydata);
 }
 // ignore: camel_case_types
-class _quizpageState extends State<quizpage> {
+class _quizpageState extends State<quizBren> {
   final List? mydata;
   _quizpageState(this.mydata);
   final box = GetStorage();
@@ -27,10 +28,10 @@ class _quizpageState extends State<quizpage> {
   Color right = Colors.green;
   Color wrong = Colors.red;
   int marks = 0;
-  int i = 1;
+  int i = 0;
   bool disableAnswer = false;
   // extra varibale to iterate
-  int j = 1;
+  int j = 0;
   int timer = 30;
   String showtimer = "30";
   List? random_array;
@@ -47,6 +48,7 @@ class _quizpageState extends State<quizpage> {
   bool canceltimer = false;
 
   genrandomarray(){
+     // ignore: unnecessary_new
      var rand = new Random();
     var distinctIds = [];
     // ignore: unnecessary_new
@@ -96,11 +98,16 @@ class _quizpageState extends State<quizpage> {
 
   void nextquestion() {
     canceltimer = false;
-    timer = 25;
+    timer = 30;
     setState(() {
       if (j < 20) {
         i = random_array![j];
+        print("random $random_array");
+        print("I $i");
+
         j++;
+
+        print("J$j");
         questionCounter ++;
       } else {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -120,12 +127,9 @@ class _quizpageState extends State<quizpage> {
     if (mydata![2][i.toString()] == mydata![1][i.toString()][k]) {
       marks = marks + 5;
       colortoshow = right;
-      print("Yse");
     } else {
-      print("Not");
       colortoshow = wrong;
       if(mydata![1][i.toString()].toString().contains(mydata![2][i.toString()])){
-        print("Not1");
         Map data = mydata![1][i.toString()];
         if(data["a"].toString() == mydata![2][i.toString()].toString()){
           setState(() {
@@ -192,67 +196,131 @@ class _quizpageState extends State<quizpage> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
-    return Scaffold(
-      backgroundColor: AppColor.prymeryColor.withOpacity(0.9),
-      body: Column(
-       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          Container(
-            padding: const EdgeInsets.all(15.0),
-            alignment: Alignment.bottomLeft,
-            // ignore: prefer_adjacent_string_concatenation
-            child: Text( "($questionCounter) " + "${mydata![0][i.toString()]}",
-              style: TextStyle(
-                color: AppColor.whiteColor,
-                fontSize: 16.0,
-                fontFamily: "Quando",
+    return WillPopScope(
+      onWillPop: ()async{
+        showDialog(
+            context: context,
+            builder: (_) => AlertDialog(
+              title: Text('Quiz'),
+              content: Text(
+                'You close quiz exam  please press exit',
               ),
-            ),
-          ),
-          AbsorbPointer(
-            absorbing: disableAnswer,
-              // ignore: avoid_unnecessary_containers
-              child: Container(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children:[
-                  choicebutton('a'),
-                  choicebutton('b'),
-                  choicebutton('c'),
-                  choicebutton('d'),
-
-                ],
-              ),
-            ),
-          ),
-          Container(
-            alignment: Alignment.topCenter,
-            child: Center(
-              child: Row(
-                children: [
-                  Text(
-                  "Your answer time $showtimer",
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      color: AppColor.whiteColor,
-                      fontWeight: FontWeight.w700,
-                      fontFamily: 'Times New Roman',
-                    ),
-                  ),
-                  // ignore: deprecated_member_use
-                  FlatButton(
+              actions: [
+                FlatButton(
                       onPressed: () {
-                        nextquestion();
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => homepage(),
+                        ));
+                        canceltimer = true;
                       },
                       child: Text(
-                        'Skip',
-                    ),
+                        'Exit',
                   ),
-                ],
+                ),
+                FlatButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Text(
+                        'Continue',
+                  ),
+                ),
+              ],
+            ),
+          );
+         return  false;
+
+      },
+      child: Scaffold(
+        backgroundColor: AppColor.prymeryColor.withOpacity(0.9),
+        body: Column(
+         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Container(
+              padding: const EdgeInsets.all(15.0),
+              alignment: Alignment.bottomLeft,
+              // ignore: prefer_adjacent_string_concatenation
+              child: Text( "($questionCounter) " + "${mydata![0][i.toString()]}",
+                style: TextStyle(
+                  color: AppColor.whiteColor,
+                  fontSize: 16.0,
+                  fontFamily: "Quando",
+                ),
               ),
             ),
-          ),
-        ],
+            AbsorbPointer(
+              absorbing: disableAnswer,
+                // ignore: avoid_unnecessary_containers
+                child: Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children:[
+                    choicebutton('a'),
+                    choicebutton('b'),
+                    choicebutton('c'),
+                    choicebutton('d'),
+    
+                  ],
+                ),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(15),
+              alignment: Alignment.topCenter,
+              child: Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                    "Your answer time $showtimer",
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        color: AppColor.whiteColor,
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'Times New Roman',
+                      ),
+                    ),
+                    
+                    if(int.parse(showtimer) < 15)...{
+                      FlatButton(
+                          onPressed: () {
+                            canceltimer = false;
+                            timer = 30;
+                            setState(() {
+                              if (j < 20) {
+                                i = random_array![j];
+                                print("random $random_array");
+                                print("I $i");
+
+                                j++;
+
+                                print("J$j");
+                                questionCounter ++;
+                              } else {
+                                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                                  builder: (context) => resultpage(marks: marks),
+                                ));
+                              }
+                              btncolor["a"] = AppColor.whiteColor;
+                              btncolor["b"] = AppColor.whiteColor;
+                              btncolor["c"] = AppColor.whiteColor;
+                              btncolor["d"] = AppColor.whiteColor;
+                              disableAnswer = false;
+                            });
+                          },
+                          child: Text(
+                            'Skip',
+                          style: TextStyle(color: AppColor.whiteColor),
+                        ),
+                      ),
+    
+                    },
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

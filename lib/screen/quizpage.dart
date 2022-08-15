@@ -5,8 +5,6 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:quiz_app/data/keys.dart';
-import 'package:quiz_app/screen/exam_bren.dart';
 import 'package:quiz_app/screen/quiz_bren.dart';
 
 
@@ -48,44 +46,18 @@ class _getjsonState extends State<getjson> {
   @override
   Widget build(BuildContext context) {
     setasset();
-    return WillPopScope(
-      onWillPop: () async {
-          // final snack = SnackBar(content: Text('Please complete your exam'),duration: Duration(seconds: 2),);
-          // ScaffoldMessenger.of(context).showSnackBar(snack);
-          showDialog(
-            context: context,
-            builder: (_) => AlertDialog(
-              title: Text('You start quiz'),
-              content: Text(
-                'You close quiz exam  please press exit',
-              ),
-              actions: [
-                FlatButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                      child: Text(
-                        'Ok',
-                  ),
-                ),
-              ],
-            ),
-          );
-         return  false;
-      },
-      child: FutureBuilder(
-        future: DefaultAssetBundle.of(context).loadString(assettoload, cache: false),
-        builder: (context, snapshot) {
-          if(snapshot.hasData){
-            List? mydata = json.decode(snapshot.data.toString());
-            return  quizpage(mydata: mydata ?? [] );
-          }else if(snapshot.hasError){
-            Navigator.canPop(context);
+    return FutureBuilder(
+      future: DefaultAssetBundle.of(context).loadString(assettoload, cache: false),
+      builder: (context, snapshot) {
+        if(snapshot.hasData){
+          List? mydata = json.decode(snapshot.data.toString());
+          return  quizBren(mydata: mydata ?? [] );
+        }else if(snapshot.hasError){
+          Navigator.canPop(context);
     
-          }
-          return Center(child: CircularProgressIndicator());
-        },
-      ),
+        }
+        return Center(child: CircularProgressIndicator());
+      },
     );
   }
 }

@@ -203,7 +203,7 @@ class _quizpageState extends State<quizBren> {
             builder: (_) => AlertDialog(
               title: Text('Quiz'),
               content: Text(
-                'You close quiz exam  please press exit',
+                'You close exam press exit',
               ),
               actions: [
                 FlatButton(
@@ -233,6 +233,26 @@ class _quizpageState extends State<quizBren> {
       },
       child: Scaffold(
         backgroundColor: AppColor.prymeryColor.withOpacity(0.9),
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: AppColor.prymeryColor.withOpacity(0),
+          elevation: 0,
+          leading: IconButton(
+            onPressed: (){
+               Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => homepage(),
+                        ));
+              canceltimer = true;
+            },
+            icon: const Icon(Icons.arrow_back_ios),
+          ),
+          title:  Text(
+            "Question " + "$questionCounter / ${random_array!.length + 1}",
+            style: TextStyle(
+              fontFamily: "Quando",
+            ),
+          ),
+        ),
         body: Column(
          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -280,9 +300,7 @@ class _quizpageState extends State<quizBren> {
                         fontFamily: 'Times New Roman',
                       ),
                     ),
-                    
-                    if(int.parse(showtimer) < 15)...{
-                      FlatButton(
+                    FlatButton(
                           onPressed: () {
                             canceltimer = false;
                             timer = 30;
@@ -313,8 +331,6 @@ class _quizpageState extends State<quizBren> {
                           style: TextStyle(color: AppColor.whiteColor),
                         ),
                       ),
-    
-                    },
                   ],
                 ),
               ),

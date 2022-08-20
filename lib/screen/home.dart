@@ -21,31 +21,44 @@ class _homepageState extends State<homepage> {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitDown, DeviceOrientation.portraitUp
     ]);
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColor.prymeryColor,
-        title: const Text(
-          "Programming hero",
-          style: TextStyle(
-            fontFamily: "Quando",
+    return WillPopScope(
+      onWillPop: ()async{
+        SystemNavigator.pop();
+        return false;
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: AppColor.prymeryColor,
+          leading: IconButton(
+            onPressed: (){
+              SystemNavigator.pop();
+            },
+            icon: const Icon(Icons.arrow_back_ios),
+          ),
+          title: const Text(
+            "Programming hero",
+            style: TextStyle(
+              fontFamily: "Quando",
+            ),
           ),
         ),
-      ),
-      body: AnimationLimiter(
-        child: ListView.builder(
-          itemCount: Datas.images.length,
-          itemBuilder: (BuildContext context, int index) {
-            return AnimationConfiguration.staggeredList(
-              position: index,
-              duration: const Duration(seconds: 1),
-              child:  SlideAnimation(
-                verticalOffset: 50.0,
-                child: FadeInAnimation(
-                  child: Customcard(context: context, langname: Datas.langname[index], image: Datas.images[index], des: Datas.des[index], color: colorsList[index],),
+        body: AnimationLimiter(
+          child: ListView.builder(
+            itemCount: Datas.images.length,
+            itemBuilder: (BuildContext context, int index) {
+              return AnimationConfiguration.staggeredList(
+                position: index,
+                duration: const Duration(seconds: 1),
+                child:  SlideAnimation(
+                  verticalOffset: 50.0,
+                  child: FadeInAnimation(
+                    child: Customcard(context: context, langname: Datas.langname[index], image: Datas.images[index], des: Datas.des[index], color: colorsList[index],),
+                  ),
                 ),
-              ),
-            );
-          },
+              );
+            },
+          ),
         ),
       ),
     );
